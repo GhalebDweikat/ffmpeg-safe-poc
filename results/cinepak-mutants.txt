@@ -1,0 +1,16 @@
+mutant                               unit tests  FATE real sample  FATE encoder tests  differential fuzz (10 s)
+block past the row end cut off at the row missed      missed            missed              caught: MISMATCH case=32 
+V1 block: bottom half gets a top colour missed      caught            caught              caught: MISMATCH case=7 
+codebooks not inherited from last strip missed      caught            missed              caught: MISMATCH case=12 
+chroma halved by shift, not division missed      caught            caught              caught: MISMATCH case=7 
+relative strip position not wrapped  missed      missed            missed              missed
+Sega FILM extra header bytes ignored missed      caught            missed              caught: MISMATCH case=12 
+-- good library restored; FATE again:
+PASS fate-cvid-palette
+PASS fate-cvid-partial
+PASS fate-cvid-grayscale
+PASS fate-film-cvid
+PASS fate-segafilm-cinepak-mux
+PASS fate-vsynth1-cinepak
+PASS fate-vsynth2-cinepak
+PASS fate-vsynth_lena-cinepak

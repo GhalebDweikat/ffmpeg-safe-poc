@@ -1,0 +1,12 @@
+CC	libavcodec/rpza_rs.o
+-rwxr-xr-x 1 root root 24095528 Nov 17 23:56 ffmpeg
+ V....D rpza_rs              QuickTime video (RPZA), safe Rust port (codec rpza)
+ V....D rpza                 QuickTime video (RPZA)
+  Stream #0:0 -> #0:0 (rpza (rpza_rs) -> wrapped_avframe (native))
+== FATE
+PASS fate-rpza
+PASS fate-vsynth1-rpza
+PASS fate-vsynth2-rpza
+PASS fate-vsynth3-rpza
+PASS fate-vsynth_lena-rpza
+FATE: 5 passed, 0 failed

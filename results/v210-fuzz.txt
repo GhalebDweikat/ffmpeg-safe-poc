@@ -1,0 +1,10 @@
+codec: v210; processes: 19, 180s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 19
+cases            41518784
+packets          186819538
+decoded          112404403
+rejected         74415135
+refused_configs  0
+mismatches       0
+panics           0

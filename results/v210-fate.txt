@@ -1,0 +1,12 @@
+== v210: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (v210 (v210_rs) -> wrapped_avframe (native))
+PASS fate-v210
+PASS fate-vsynth1-v210
+PASS fate-vsynth2-v210
+PASS fate-vsynth3-v210
+PASS fate-vsynth_lena-v210
+PASS fate-vsynth1-v210-10
+PASS fate-vsynth2-v210-10
+PASS fate-vsynth3-v210-10
+PASS fate-vsynth_lena-v210-10
+FATE v210: 9 passed, 0 failed

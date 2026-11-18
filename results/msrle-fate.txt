@@ -1,0 +1,8 @@
+== msrle: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (msrle (msrle_rs) -> wrapped_avframe (native))
+PASS fate-msrle-8bit
+PASS fate-vsynth1-msrle
+PASS fate-vsynth2-msrle
+PASS fate-vsynth3-msrle
+PASS fate-vsynth_lena-msrle
+FATE msrle: 5 passed, 0 failed

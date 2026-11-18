@@ -1,0 +1,39 @@
+== cinepak: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (cinepak (cinepak_rs) -> wrapped_avframe (native))
+PASS fate-cvid-palette
+PASS fate-cvid-partial
+PASS fate-cvid-grayscale
+PASS fate-film-cvid
+PASS fate-segafilm-cinepak-mux
+PASS fate-vsynth1-cinepak
+PASS fate-vsynth2-cinepak
+PASS fate-vsynth_lena-cinepak
+FATE cinepak: 8 passed, 0 failed
+== msrle: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (msrle (msrle_rs) -> wrapped_avframe (native))
+PASS fate-msrle-8bit
+PASS fate-vsynth1-msrle
+PASS fate-vsynth2-msrle
+PASS fate-vsynth3-msrle
+PASS fate-vsynth_lena-msrle
+FATE msrle: 5 passed, 0 failed
+== rpza: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (rpza (rpza_rs) -> wrapped_avframe (native))
+PASS fate-rpza
+PASS fate-vsynth1-rpza
+PASS fate-vsynth2-rpza
+PASS fate-vsynth3-rpza
+PASS fate-vsynth_lena-rpza
+FATE rpza: 5 passed, 0 failed
+== v210: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (v210 (v210_rs) -> wrapped_avframe (native))
+PASS fate-v210
+PASS fate-vsynth1-v210
+PASS fate-vsynth2-v210
+PASS fate-vsynth3-v210
+PASS fate-vsynth_lena-v210
+PASS fate-vsynth1-v210-10
+PASS fate-vsynth2-v210-10
+PASS fate-vsynth3-v210-10
+PASS fate-vsynth_lena-v210-10
+FATE v210: 9 passed, 0 failed

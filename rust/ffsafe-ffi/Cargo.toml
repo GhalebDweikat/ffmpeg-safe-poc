@@ -1,0 +1,15 @@
+[package]
+name = "ffsafe-ffi"
+version = "0.1.0"
+edition = "2021"
+description = "C entry points for the safe decoder ports, linked into FFmpeg"
+license = "LGPL-2.1-or-later"
+
+[lib]
+crate-type = ["staticlib"]
+
+[dependencies]
+rpza-core = { path = "../rpza-core" }
+msrle-core = { path = "../msrle-core" }
+cinepak-core = { path = "../cinepak-core" }
+v210-core = { path = "../v210-core" }

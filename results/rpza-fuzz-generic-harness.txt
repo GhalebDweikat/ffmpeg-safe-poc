@@ -1,0 +1,16 @@
+codec: rpza; processes: 13, 120s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 13
+cases            14149568
+packets          63674375
+decoded          24462965
+rejected         39211410
+refused_configs  0
+ok               20315468
+too_small        655322
+four_trunc       4937554
+sixteen_trunc    9950814
+no_blocks        8027584
+unknown_op       11505754
+mismatches       0
+panics           0

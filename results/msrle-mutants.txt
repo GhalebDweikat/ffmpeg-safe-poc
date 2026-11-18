@@ -1,0 +1,12 @@
+mutant                               unit tests  FATE real sample  FATE encoder tests  differential fuzz (10 s)
+run bounded by width, not stride     caught      missed            missed              caught: MISMATCH case=1 
+8-bit copy padding not skipped       caught      caught            caught              caught: MISMATCH case=2 
+skipped run consumes its pixel       missed      missed            missed              caught: MISMATCH case=1 
+4-bit run starts on low nibble       caught      missed            missed              caught: MISMATCH case=6 
+raw picture not flipped              caught      missed            missed              caught: MISMATCH case=1 
+-- good library restored; FATE again:
+PASS fate-msrle-8bit
+PASS fate-vsynth1-msrle
+PASS fate-vsynth2-msrle
+PASS fate-vsynth3-msrle
+PASS fate-vsynth_lena-msrle

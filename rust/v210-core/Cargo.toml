@@ -1,0 +1,6 @@
+[package]
+name = "v210-core"
+version = "0.1.0"
+edition = "2021"
+description = "Safe Rust port of FFmpeg's v210 (uncompressed 10-bit 4:2:2) decoder"
+license = "LGPL-2.1-or-later"

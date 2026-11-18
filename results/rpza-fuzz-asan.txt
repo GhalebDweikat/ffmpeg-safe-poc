@@ -1,0 +1,14 @@
+processes: 11, 120s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 11
+cases          8807360
+packets        30836706
+decoded        11945364
+rejected       18891342
+too_small      320641
+four_trunc     2370429
+sixteen_trunc  5756551
+no_blocks      4159489
+unknown_op     6284232
+mismatches     0
+panics         0

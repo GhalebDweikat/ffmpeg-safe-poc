@@ -1,0 +1,11 @@
+== cinepak: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (cinepak (cinepak_rs) -> wrapped_avframe (native))
+PASS fate-cvid-palette
+PASS fate-cvid-partial
+PASS fate-cvid-grayscale
+PASS fate-film-cvid
+PASS fate-segafilm-cinepak-mux
+PASS fate-vsynth1-cinepak
+PASS fate-vsynth2-cinepak
+PASS fate-vsynth_lena-cinepak
+FATE cinepak: 8 passed, 0 failed

@@ -1,0 +1,25 @@
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+    Finished `release` profile [optimized] target(s) in 1.48s
+== fuzz gate (8s x 8 processes)
+RESULT seed=251192 mode=generated cases=344384 packets=1204298 decoded=447375 rejected=756923 ok=447375 too_small=14422 four_trunc=103754 sixteen_trunc=214835 no_blocks=172107 unknown_op=251805 mismat
+RESULT seed=217143 mode=generated cases=339456 packets=1188104 decoded=441468 rejected=746636 ok=441468 too_small=14001 four_trunc=101598 sixteen_trunc=212767 no_blocks=170286 unknown_op=247984 mismat
+RESULT seed=173674 mode=generated cases=345152 packets=1208754 decoded=449269 rejected=759485 ok=449269 too_small=14323 four_trunc=103428 sixteen_trunc=215805 no_blocks=173450 unknown_op=252479 mismat
+RESULT seed=82426 mode=generated cases=339840 packets=1187994 decoded=439707 rejected=748287 ok=439707 too_small=14227 four_trunc=102043 sixteen_trunc=212541 no_blocks=170725 unknown_op=248751 mismatc
+RESULT seed=235871 mode=generated cases=338624 packets=1188122 decoded=440767 rejected=747355 ok=440767 too_small=14005 four_trunc=102766 sixteen_trunc=212138 no_blocks=169936 unknown_op=248510 mismat
+RESULT seed=289365 mode=generated cases=354240 packets=1239530 decoded=460684 rejected=778846 ok=460684 too_small=14683 four_trunc=107017 sixteen_trunc=220951 no_blocks=177605 unknown_op=258590 mismat
+== bench
+input                  size      frames   C us/frame  Rust us/frame   Rust/C    (min)
+path:skip32            1280x720      60        38.45           3.80    0.099    0.103
+path:fill1             1280x720      60       152.23         119.27    0.784    0.785
+path:fill32            1280x720      60       119.33          33.72    0.283    0.279
+path:four1             1280x720      60       449.51         480.81    1.070    1.067
+path:fourc1            1280x720      60       452.03         481.18    1.064    1.060
+path:four32            1280x720      60       226.05         188.84    0.835    0.820
+path:sixteen           1280x720      60       433.72         344.87    0.795    0.805
+life-720p              1280x720     300       165.40         103.83    0.628    0.619
+mandelbrot-720p        1280x720     300       266.40         217.94    0.818    0.820
+noise-720p             1280x720     120       432.93         344.57    0.796    0.797
+odd-637x353            636x352      300        17.05           8.78    0.515    0.518
+photo-704x576          704x576       50       149.28         118.34    0.793    0.800
+real-rpza2             320x240      146        19.42          18.04    0.929    0.936
+testsrc2-720p          1280x720     300        61.90          26.49    0.428    0.417

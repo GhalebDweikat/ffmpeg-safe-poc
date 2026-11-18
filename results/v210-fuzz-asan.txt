@@ -1,0 +1,11 @@
+-rwxr-xr-x 1 root root 18016680 Nov 18 08:28 /build/harness/difffuzz-asan
+codec: v210; processes: 11, 90s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 11
+cases            6157888
+packets          27708351
+decoded          16730089
+rejected         10978262
+refused_configs  0
+mismatches       0
+panics           0

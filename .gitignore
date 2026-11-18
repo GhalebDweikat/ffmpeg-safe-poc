@@ -1,0 +1,6 @@
+/ffmpeg/
+target/
+*.a
+*.o
+mismatch.bin
+.claude/

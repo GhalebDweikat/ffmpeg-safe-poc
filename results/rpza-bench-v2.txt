@@ -1,0 +1,20 @@
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+    Finished `release` profile [optimized] target(s) in 1.50s
+== fuzz gate (8s x 8 processes)
+RESULT seed=17842 mode=mutate-real cases=24832 packets=87045 decoded=45127 rejected=41918 ok=45127 too_small=267 four_trunc=7537 sixteen_trunc=8090 no_blocks=2740 unknown_op=23284 mismatches=0 panics=0
+RESULT seed=147056 mode=generated cases=355456 packets=1242735 decoded=461006 rejected=781729 ok=461006 too_small=14627 four_trunc=106924 sixteen_trunc=222240 no_blocks=177885 unknown_op=260053 mismatches=0 panics=0
+RESULT seed=15471 mode=generated cases=357376 packets=1250755 decoded=463335 rejected=787420 ok=463335 too_small=14643 four_trunc=107929 sixteen_trunc=223661 no_blocks=179697 unknown_op=261490 mismatches=0 panics=0
+RESULT seed=150075 mode=generated cases=364928 packets=1277553 decoded=474143 rejected=803410 ok=474143 too_small=15185 four_trunc=109802 sixteen_trunc=228914 no_blocks=183368 unknown_op=266141 mismatches=0 panics=0
+RESULT seed=187403 mode=generated cases=360448 packets=1261536 decoded=468725 rejected=792811 ok=468725 too_small=14880 four_trunc=108605 sixteen_trunc=225599 no_blocks=180904 unknown_op=262823 mismatches=0 panics=0
+RESULT seed=19754 mode=generated cases=347008 packets=1214033 decoded=450778 rejected=763255 ok=450778 too_small=14110 four_trunc=104632 sixteen_trunc=216734 no_blocks=174911 unknown_op=252868 mismatches=0 panics=0
+RESULT seed=222782 mode=generated cases=360320 packets=1260519 decoded=467378 rejected=793141 ok=467378 too_small=14749 four_trunc=109034 sixteen_trunc=225140 no_blocks=180622 unknown_op=263596 mismatches=0 panics=0
+RESULT seed=388 mode=mutate-real cases=16704 packets=58237 decoded=31433 rejected=26804 ok=31433 too_small=212 four_trunc=442 sixteen_trunc=10240 no_blocks=722 unknown_op=15188 mismatches=0 panics=0
+== bench
+clip                   size      frames   C us/frame Rust us/frame    Rust/C     (min)
+life-720p              1280x720     300       161.73       114.85     0.710     0.716
+mandelbrot-720p        1280x720     300       265.92       411.50     1.547     1.551
+noise-720p             1280x720     120       427.02       348.88     0.817     0.825
+odd-637x353            636x352      300        17.36        11.71     0.674     0.704
+photo-704x576          704x576       50       153.13       168.14     1.098     1.107
+real-rpza2             320x240      146        19.15        22.49     1.175     1.165
+testsrc2-720p          1280x720     300        62.03        33.52     0.540     0.541

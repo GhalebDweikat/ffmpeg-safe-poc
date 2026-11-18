@@ -1,0 +1,17 @@
+mutant                               unit tests  FATE real sample  FATE encoder tests  differential fuzz (10 s)
+AVX2: one luma multiplier wrong      missed      caught            caught              caught: MISMATCH case=1 
+portable: third luma sample from wrong field caught      caught            caught              caught: MISMATCH case=2 
+row tail: third chroma sample wrong  caught      missed            missed              caught: MISMATCH case=36 
+short-padding guess misses 12-pixel rows missed      missed            missed              caught: MISMATCH case=14 
+INFO header not skipped              missed      missed            missed              caught: MISMATCH case=3 
+unpadded rows: one chroma word off   missed      missed            missed              caught: MISMATCH case=8 
+-- good library restored; FATE again:
+PASS fate-v210
+PASS fate-vsynth1-v210
+PASS fate-vsynth2-v210
+PASS fate-vsynth3-v210
+PASS fate-vsynth_lena-v210
+PASS fate-vsynth1-v210-10
+PASS fate-vsynth2-v210-10
+PASS fate-vsynth3-v210-10
+PASS fate-vsynth_lena-v210-10

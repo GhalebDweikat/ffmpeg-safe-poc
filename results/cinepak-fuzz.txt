@@ -1,0 +1,10 @@
+codec: cinepak; processes: 21, 180s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 21
+cases            24295552
+packets          109306800
+decoded          58445995
+rejected         50860805
+refused_configs  0
+mismatches       0
+panics           0

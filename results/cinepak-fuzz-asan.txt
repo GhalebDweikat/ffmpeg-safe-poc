@@ -1,0 +1,14 @@
+libavformat/protocol_list.c is unchanged
+ffbuild/config.sh is unchanged
+CC	libavutil/error.o
+-rwxr-xr-x 1 root root 18016680 Nov 18 08:26 /build/harness/difffuzz-asan
+codec: cinepak; processes: 13, 90s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 13
+cases            2162304
+packets          9725799
+decoded          5128702
+rejected         4597097
+refused_configs  0
+mismatches       0
+panics           0

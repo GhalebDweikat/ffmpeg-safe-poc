@@ -1,0 +1,12 @@
+mutant                               unit tests  FATE real sample  FATE encoder tests  differential fuzz (10 s)
+blend weight 21 -> 20                missed      caught            missed              caught: MISMATCH case=2 
+skip run of 32 treated as 31         missed      caught            missed              caught: MISMATCH case=6 
+16-colour block: first pixel         missed      missed            caught              caught: MISMATCH case=2 
+extra block after frame accepted     missed      missed            missed              caught: MISMATCH case=24 
+edge column loses a byte             missed      missed            caught              caught: MISMATCH case=2 
+-- good library restored; FATE again:
+PASS fate-rpza
+PASS fate-vsynth1-rpza
+PASS fate-vsynth2-rpza
+PASS fate-vsynth3-rpza
+PASS fate-vsynth_lena-rpza
