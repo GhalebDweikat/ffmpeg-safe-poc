@@ -1,0 +1,15 @@
+== targa: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (targa (targa_rs) -> wrapped_avframe (native))
+PASS fate-targa-conformance-CBW8
+PASS fate-targa-conformance-CCM8
+PASS fate-targa-conformance-CTC16
+PASS fate-targa-conformance-CTC24
+PASS fate-targa-conformance-CTC32
+PASS fate-targa-conformance-UBW8
+PASS fate-targa-conformance-UCM8
+PASS fate-targa-conformance-UTC16
+PASS fate-targa-conformance-UTC24
+PASS fate-targa-conformance-UTC32
+PASS fate-targa-top-to-bottom
+PASS fate-lavf-tga
+FATE targa: 12 passed, 0 failed

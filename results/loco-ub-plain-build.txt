@@ -1,0 +1,1 @@
+RESULT codec=loco seed=77 mode=generated cases=51328 packets=206825 decoded=127345 rejected=79480 refused_configs=5358 mismatches=0 panics=0

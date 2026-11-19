@@ -1,0 +1,6 @@
+[package]
+name = "tta-core"
+version = "0.1.0"
+edition = "2021"
+description = "Safe Rust port of FFmpeg's TTA (True Audio) decoder"
+license = "LGPL-2.1-or-later"

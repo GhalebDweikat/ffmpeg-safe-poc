@@ -1,0 +1,10 @@
+codec: aic; processes: 12, 180s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 12
+cases            1971200
+packets          8872510
+decoded          4979566
+rejected         3892944
+refused_configs  0
+mismatches       0
+panics           0

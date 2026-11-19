@@ -1,0 +1,15 @@
+== unit tests, debug build
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+== library with overflow checks
+    Finished `release` profile [optimized] target(s) in 0.17s
+codec: flac; processes: 14, 60s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 14
+cases            4578368
+packets          20159279
+decoded          10433083
+rejected         9893150
+refused_configs  98410
+mismatches       0
+panics           0

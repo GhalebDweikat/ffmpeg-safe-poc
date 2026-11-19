@@ -8,7 +8,7 @@ set -euo pipefail
 LIBS="$SRC/libavformat/libavformat.a $SRC/libavcodec/libavcodec.a $SRC/libswresample/libswresample.a $SRC/libavutil/libavutil.a $RUSTLIB $SYSLIBS"
 mkdir -p "$HARNESS"
 for h in difffuzz bench; do
-    gcc -O2 -Wall -I"$SRC" "$PROJ/harness/$h.c" "$PROJ/harness/common.c" "$PROJ"/harness/codec_*.c $LIBS -o "$HARNESS/$h"
+    gcc -O2 -Wall -I"$SRC" "$PROJ/harness/$h.c" $(harness_sources) $LIBS -o "$HARNESS/$h"
 done
 [ "${1:-}" = build-only ] && exit 0
 ls -l "$HARNESS"

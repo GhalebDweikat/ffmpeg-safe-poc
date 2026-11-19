@@ -1,0 +1,5 @@
+input                  size      frames   C us/frame  Rust us/frame   Rust/C    (min)
+path:random            1280x720      60     13765.13        8302.60    0.603    0.617
+path:smooth            1280x720      60     14070.75        6617.27    0.470    0.471
+path:flat              1280x720      60      9523.14        5829.94    0.612    0.597
+real-flowers           1280x720       4     14732.93        5868.25    0.398    0.386

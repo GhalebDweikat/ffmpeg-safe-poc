@@ -1,0 +1,18 @@
+== unit tests, debug build
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+== library with overflow checks
+    Finished `release` profile [optimized] target(s) in 0.39s
+codec: msvideo1; processes: 8, 60s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 8
+cases            5322112
+packets          23615242
+decoded          23598609
+rejected         16633
+refused_configs  75040
+finished         10720348
+ran_out          4697131
+too_small        15018
+mismatches       0
+panics           0

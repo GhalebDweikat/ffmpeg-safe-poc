@@ -1,0 +1,11 @@
+mutant                               unit tests  FATE real sample  FATE encoder tests  differential fuzz (10 s)
+length table: gap starts a bit early caught      caught            -                   caught: MISMATCH case=1 
+bits-left check off by one           caught      missed            -                   caught: MISMATCH case=4 
+residual sign ignored                caught      caught            -                   caught: MISMATCH case=1 
+row start predicted from above       caught      caught            -                   caught: MISMATCH case=1 
+SSE2 overwrite after odd rows dropped caught      missed            -                   caught: MISMATCH case=2 
+zero-width plane gets no sample      caught      missed            -                   missed
+SSE2 predictor: clamp on wrong side  missed      caught            -                   caught: MISMATCH case=1 
+portable predictor: no top-left      caught      missed            -                   caught: MISMATCH case=3 
+-- good library restored; FATE again:
+PASS fate-vble

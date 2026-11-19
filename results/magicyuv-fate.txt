@@ -1,0 +1,14 @@
+== magicyuv: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (magicyuv (magicyuv_rs) -> wrapped_avframe (native))
+PASS fate-magicyuv-rgb
+PASS fate-magicyuv-rgba
+PASS fate-magicyuv-y400i
+PASS fate-magicyuv-y420
+PASS fate-magicyuv-y422i
+PASS fate-magicyuv-y444
+PASS fate-magicyuv-y4444i
+PASS fate-vsynth1-magicyuv
+PASS fate-vsynth2-magicyuv
+PASS fate-vsynth3-magicyuv
+PASS fate-vsynth_lena-magicyuv
+FATE magicyuv: 11 passed, 0 failed

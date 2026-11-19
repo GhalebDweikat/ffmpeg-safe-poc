@@ -1,0 +1,15 @@
+== unit tests, debug build
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+== library with overflow checks
+    Finished `release` profile [optimized] target(s) in 5.18s
+codec: aic; processes: 7, 90s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 7
+cases            739136
+packets          3328150
+decoded          1861235
+rejected         1466915
+refused_configs  0
+mismatches       0
+panics           0

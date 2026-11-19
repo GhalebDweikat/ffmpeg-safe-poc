@@ -1,0 +1,10 @@
+codec: flac; processes: 19, 400s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 19
+cases            34867840
+packets          151429861
+decoded          74915871
+rejected         78570377
+refused_configs  1217894
+mismatches       0
+panics           0

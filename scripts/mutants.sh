@@ -8,7 +8,7 @@ set -uo pipefail
 . /proj/scripts/common.sh
 load_codec "${1:?codec}"
 
-WORK=/build/mutants
+WORK=$ROOT/mutants
 LIBS="$SRC/libavformat/libavformat.a $SRC/libavcodec/libavcodec.a $SRC/libswresample/libswresample.a $SRC/libavutil/libavutil.a"
 
 rm -rf "$WORK"
@@ -16,7 +16,7 @@ mkdir -p "$WORK"
 cp "$RUSTLIB" "$WORK/good.a"
 restore() {
     cp "$WORK/good.a" "$RUSTLIB"
-    (cd "$SRC" && rm -f ffmpeg ffmpeg_g && make -j"$(nproc)" >/dev/null 2>&1)
+    (cd "$SRC" && rm -f ffmpeg ffmpeg_g && make -j"$JOBS" >/dev/null 2>&1)
 }
 trap restore EXIT
 
@@ -35,14 +35,14 @@ for m in "${MUTANTS[@]}"; do
     expr=${m#*|}
     rm -rf "$WORK/src"
     cp -r "$PROJ/rust" "$WORK/src"
-    file="$WORK/src/$CODEC-core/src/lib.rs"
-    before=$(md5sum <"$file")
-    sed -i "$expr" "$file"
-    if [ "$before" = "$(md5sum <"$file")" ]; then
+    files=$(find "$WORK/src/$CODEC-core/src" -name "*.rs" | sort)
+    before=$(cat $files | md5sum)
+    sed -i "$expr" $files
+    if [ "$before" = "$(cat $files | md5sum)" ]; then
         echo "$name: mutation did not apply"
         continue
     fi
-    if ! (cd "$WORK/src" && CARGO_TARGET_DIR="$WORK/target" cargo build --release -p ffsafe-ffi >"$WORK/build.log" 2>&1); then
+    if ! (cd "$WORK/src" && CARGO_TARGET_DIR="$WORK/target" cargo build --release -p ffsafe-ffi $CARGO_FEATURES >"$WORK/build.log" 2>&1); then
         echo "$name: mutant does not compile"
         continue
     fi
@@ -52,11 +52,11 @@ for m in "${MUTANTS[@]}"; do
     grep -q "test result: FAILED" "$WORK/unit.log" && unit=caught || unit=missed
 
     cp "$WORK/target/release/libffsafe_ffi.a" "$RUSTLIB"
-    (cd "$SRC" && rm -f ffmpeg ffmpeg_g && make -j"$(nproc)" >/dev/null 2>&1)
+    (cd "$SRC" && rm -f ffmpeg ffmpeg_g && make -j"$JOBS" >/dev/null 2>&1)
     real=$(fate_group "$FATE_REAL")
     enc=$(fate_group "$FATE_ENC")
 
-    gcc -O2 -I"$SRC" "$PROJ/harness/difffuzz.c" "$PROJ/harness/common.c" "$PROJ"/harness/codec_*.c \
+    gcc -O2 -I"$SRC" "$PROJ/harness/difffuzz.c" $(harness_sources) \
         $LIBS "$RUSTLIB" $SYSLIBS -o "$WORK/difffuzz"
     out=$(cd "$WORK" && ./difffuzz "$CODEC" 7 10 | head -n 1)
     case "$out" in

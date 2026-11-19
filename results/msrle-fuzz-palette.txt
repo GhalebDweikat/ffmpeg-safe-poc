@@ -1,0 +1,10 @@
+codec: msrle; processes: 14, 150s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 14
+cases            25018240
+packets          110805272
+decoded          110256617
+rejected         548655
+refused_configs  395500
+mismatches       0
+panics           0

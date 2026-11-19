@@ -1,0 +1,6 @@
+== aic (C)
+default CPU flags: Y hash cdca6700767e56c6, first pixels 0 0 0 255 255 0 0 0
+CPU flags off:     Y hash 3aa5417cf1174930, first pixels 43 255 255 0 255 0 0 255
+== aic_rs
+default CPU flags: Y hash cdca6700767e56c6, first pixels 0 0 0 255 255 0 0 0
+CPU flags off:     Y hash 3aa5417cf1174930, first pixels 43 255 255 0 255 0 0 255

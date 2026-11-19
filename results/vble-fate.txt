@@ -1,0 +1,4 @@
+== vble: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (vble (vble_rs) -> wrapped_avframe (native))
+PASS fate-vble
+FATE vble: 1 passed, 0 failed

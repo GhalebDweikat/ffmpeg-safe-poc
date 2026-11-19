@@ -1,0 +1,10 @@
+codec: targa; processes: 12, 180s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 12
+cases            30319616
+packets          136459756
+decoded          82544359
+rejected         53915397
+refused_configs  0
+mismatches       0
+panics           0

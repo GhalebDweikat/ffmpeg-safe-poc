@@ -1,0 +1,32 @@
+/build/samples/prores/Sequence_1-Apple_ProRes_422.mov apcn,1920,1080,yuv422p10le,2
+/build/samples/prores/Sequence_1-Apple_ProRes_422_HQ.mov apch,1920,1080,yuv422p10le,2
+/build/samples/prores/Sequence_1-Apple_ProRes_422_LT.mov apcs,1920,1080,yuv422p10le,2
+/build/samples/prores/Sequence_1-Apple_ProRes_422_Proxy.mov apco,1920,1080,yuv422p10le,2
+/build/samples/prores/Sequence_1-Apple_ProRes_with_Alpha.mov ap4h,1920,1080,yuva444p12le,2
+/build/samples/prores/gray.mov apcn,720,576,yuv422p10le,2
+/build/samples/prores/prores4444_with_transparency.mov ap4h,1920,1080,yuva444p12le,1,
+input                  size      frames   C us/frame  Rust us/frame   Rust/C    (min)
+path:dc-422            1280x720      12      1341.20        4547.30    3.390    3.385
+path:sparse-422        1280x720      12      2622.18        5706.24    2.176    2.151
+path:medium-422        1280x720      12      5436.51        8685.35    1.598    1.541
+path:dense-422         1280x720      12     16359.39       19305.29    1.180    1.220
+path:medium-422i       1280x720      12      6336.25       10545.11    1.664    1.578
+path:dc-444-12         1280x720      12      5937.41        5787.70    0.975    1.046
+path:sparse-444-12     1280x720      12      9717.75        9671.42    0.995    1.092
+path:medium-444-12     1280x720      12     18488.00       15566.57    0.842    0.871
+path:dense-444-12      1280x720      12     35078.49       33441.53    0.953    0.874
+path:dc-alpha16-12     1280x720      12      7667.46        7282.96    0.950    1.046
+path:dc-alpha8-10      1280x720      12      3347.70        9551.63    2.853    3.028
+4444-testsrc2-720p     1280x720      16     12491.12       11309.52    0.905    0.919
+4444a-testsrc2-720p    1280x720      16     21998.93       21216.57    0.964    0.950
+aw-testsrc2-1080i      1920x1080     12      7941.05       16357.03    2.060    1.991
+hq-mandelbrot-720p     1280x720      24      7328.52       10580.99    1.444    1.432
+hq-photo-704x576       704x576       30      6123.89        7401.96    1.209    1.215
+hq-testsrc2-720p       1280x720      24      4024.53        8406.37    2.089    1.928
+ks-testsrc2-1080i      1920x1080     12      7429.62       15666.74    2.109    1.957
+proxy-testsrc2-720p    1280x720      24      1984.20        5986.76    3.017    2.865
+real-422-hq            1920x1080      2      4616.43       11893.62    2.576    2.785
+real-422-proxy         1920x1080      2      4011.01       10858.29    2.707    2.699
+real-4444-alpha        1920x1080      2     22126.00       16253.89    0.735    0.873
+real-4444-transparency 1920x1080      1     21411.20       18825.52    0.879    0.979
+xq-mandelbrot-720p     1280x720      16     20553.18       19090.44    0.929    0.935

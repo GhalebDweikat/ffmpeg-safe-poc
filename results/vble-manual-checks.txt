@@ -1,0 +1,25 @@
+13:    printf "%-44s %s\n" "$label" "$($FF "${@:1:$#-1}" -c:v "$dec" -i "${@: -1}" -f framecrc - 2>/dev/null | grep '^0,' | md5sum | cut -c1-12)"
+== frame threads: same frames with 1 and 4 threads
+C, 1 thread                                  108b4ade1a60
+Rust, 1 thread                               108b4ade1a60
+Rust, 4 frame threads                        108b4ade1a60
+patched 2 width fields -> 1279
+== width 1279: C decoder with and without its assembly, and the port
+C, SSE2 predictor                            6cf4abd65dac
+C, -cpuflags 0 (C predictor)                 af4d6543e97f
+Rust                                         6cf4abd65dac
+Rust, -cpuflags 0                            af4d6543e97f
+patched 2 width fields -> 1278
+== width 1278: C decoder with and without its assembly, and the port
+C, SSE2 predictor                            693d366ed184
+C, -cpuflags 0 (C predictor)                 693d366ed184
+Rust                                         693d366ed184
+Rust, -cpuflags 0                            693d366ed184
+patched 2 width fields -> 1249
+== width 1249: C decoder with and without its assembly, and the port
+C, SSE2 predictor                            ad4181e870b9
+C, -cpuflags 0 (C predictor)                 ad4181e870b9
+Rust                                         ad4181e870b9
+Rust, -cpuflags 0                            ad4181e870b9
+f6d13e593ce54bbee40d1479ac8dcde2  -
+f6d13e593ce54bbee40d1479ac8dcde2  -

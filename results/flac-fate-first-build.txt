@@ -1,0 +1,210 @@
+== flac: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (flac (flac_rs) -> pcm_s16le (native))
+FAIL fate-filter-hdcd-mix
+TEST    filter-hdcd-mix
+--- -	2026-11-18 19:55:50.166618644 +0000
++++ tests/data/fate/filter-hdcd-mix	2026-11-18 19:55:50.160954258 +0000
+@@ -1 +1 @@
+-77443573e0bd3532de52a8bc0e825da7
++fb0914f938b34bc758bf17063b30f759
+Test filter-hdcd-mix failed. Look at tests/data/fate/filter-hdcd-mix.err for details.
+make: *** [tests/Makefile:323: fate-filter-hdcd-mix] Error 1
+FAIL fate-filter-hdcd-mix-psoff
+TEST    filter-hdcd-mix-psoff
+--- -	2026-11-18 19:55:50.464925830 +0000
++++ tests/data/fate/filter-hdcd-mix-psoff	2026-11-18 19:55:50.460969079 +0000
+@@ -1 +1 @@
+-89e57885917a436b30855db4d478cefb
++3e1fcdfa7a72e2e0688d6fa1b565a7bf
+Test filter-hdcd-mix-psoff failed. Look at tests/data/fate/filter-hdcd-mix-psoff.err for details.
+make: *** [tests/Makefile:323: fate-filter-hdcd-mix-psoff] Error 1
+FAIL fate-filter-hdcd-analyze-pe
+TEST    filter-hdcd-analyze-pe
+--- -	2026-11-18 19:55:50.782466835 +0000
++++ tests/data/fate/filter-hdcd-analyze-pe	2026-11-18 19:55:50.776984692 +0000
+@@ -1 +1 @@
+-2d839d8a1cf73b10a566ce3d4cfaa79e
++c273a9d6f2934fc2110fe623dce9563f
+Test filter-hdcd-analyze-pe failed. Look at tests/data/fate/filter-hdcd-analyze-pe.err for details.
+make: *** [tests/Makefile:323: fate-filter-hdcd-analyze-pe] Error 1
+FAIL fate-filter-hdcd-analyze-lle
+TEST    filter-hdcd-analyze-lle
+--- -	2026-11-18 19:55:51.094490635 +0000
++++ tests/data/fate/filter-hdcd-analyze-lle	2026-11-18 19:55:51.089000107 +0000
+@@ -1 +1 @@
+-b4b185332b7025c191062f49a2c015f1
++6564ff7731b55452daf217fe542d220f
+Test filter-hdcd-analyze-lle failed. Look at tests/data/fate/filter-hdcd-analyze-lle.err for details.
+make: *** [tests/Makefile:323: fate-filter-hdcd-analyze-lle] Error 1
+FAIL fate-filter-hdcd-analyze-cdt
+TEST    filter-hdcd-analyze-cdt
+--- -	2026-11-18 19:55:51.399498600 +0000
++++ tests/data/fate/filter-hdcd-analyze-cdt	2026-11-18 19:55:51.393015127 +0000
+@@ -1 +1 @@
+-afa6577675c63e87da3edbd442b7b6e2
++2d24decad35c391af836fb6791bc4ce1
+Test filter-hdcd-analyze-cdt failed. Look at tests/data/fate/filter-hdcd-analyze-cdt.err for details.
+make: *** [tests/Makefile:323: fate-filter-hdcd-analyze-cdt] Error 1
+FAIL fate-filter-hdcd-analyze-tgm
+TEST    filter-hdcd-analyze-tgm
+--- -	2026-11-18 19:55:51.702420839 +0000
++++ tests/data/fate/filter-hdcd-analyze-tgm	2026-11-18 19:55:51.697030146 +0000
+@@ -1 +1 @@
+-285f0fd2249b4903cd5e1ad5ce004219
++e6aa00beed1265a63384b3c401e6cd12
+Test filter-hdcd-analyze-tgm failed. Look at tests/data/fate/filter-hdcd-analyze-tgm.err for details.
+make: *** [tests/Makefile:323: fate-filter-hdcd-analyze-tgm] Error 1
+FAIL fate-filter-hdcd-analyze-ltgm
+TEST    filter-hdcd-analyze-ltgm
+--- -	2026-11-18 19:55:52.007914264 +0000
++++ tests/data/fate/filter-hdcd-analyze-ltgm	2026-11-18 19:55:52.001045165 +0000
+@@ -1 +1 @@
+-404dc2301ea97e9f96c3d6d2ebcfeaa5
++8ac16256c8dec97fe2aa5de00b59959d
+Test filter-hdcd-analyze-ltgm failed. Look at tests/data/fate/filter-hdcd-analyze-ltgm.err for details.
+make: *** [tests/Makefile:323: fate-filter-hdcd-analyze-ltgm] Error 1
+FAIL fate-filter-hdcd-analyze-pel
+TEST    filter-hdcd-analyze-pel
+--- -	2026-11-18 19:55:52.311300669 +0000
++++ tests/data/fate/filter-hdcd-analyze-pel	2026-11-18 19:55:52.305060185 +0000
+@@ -1 +1 @@
+-9342983208ec1a7f2b3e332ac4dcb723
++f7e2e693092603fd73f4037a7595e04f
+Test filter-hdcd-analyze-pel failed. Look at tests/data/fate/filter-hdcd-analyze-pel.err for details.
+make: *** [tests/Makefile:323: fate-filter-hdcd-analyze-pel] Error 1
+PASS fate-filter-hdcd-false-positive
+FAIL fate-filter-hdcd-detect-errors
+TEST    filter-hdcd-detect-errors
+Test filter-hdcd-detect-errors failed. Look at tests/data/fate/filter-hdcd-detect-errors.err for details.
+make: *** [tests/Makefile:323: fate-filter-hdcd-detect-errors] Error 1
+PASS fate-filter-hdcd-20bit
+FAIL fate-filter-metadata-ebur128
+-pts=1296000|tag:lavfi.r128.M=-22.849|tag:lavfi.r128.S=-21.873|tag:lavfi.r128.I=-22.952|tag:lavfi.r128.LRA=4.990|tag:lavfi.r128.LRA.low=-26.240|tag:lavfi.r128.LRA.high=-21.250
+-pts=1300800|tag:lavfi.r128.M=-23.041|tag:lavfi.r128.S=-22.068|tag:lavfi.r128.I=-22.952|tag:lavfi.r128.LRA=4.990|tag:lavfi.r128.LRA.low=-26.240|tag:lavfi.r128.LRA.high=-21.250
+-pts=1305600|tag:lavfi.r128.M=-23.898|tag:lavfi.r128.S=-22.285|tag:lavfi.r128.I=-22.956|tag:lavfi.r128.LRA=4.990|tag:lavfi.r128.LRA.low=-26.240|tag:lavfi.r128.LRA.high=-21.250
+-pts=1310400|tag:lavfi.r128.M=-24.280|tag:lavfi.r128.S=-22.343|tag:lavfi.r128.I=-22.960|tag:lavfi.r128.LRA=4.990|tag:lavfi.r128.LRA.low=-26.240|tag:lavfi.r128.LRA.high=-21.250
+-pts=1315200|tag:lavfi.r128.M=-25.072|tag:lavfi.r128.S=-22.479|tag:lavfi.r128.I=-22.966|tag:lavfi.r128.LRA=4.990|tag:lavfi.r128.LRA.low=-26.240|tag:lavfi.r128.LRA.high=-21.250
+-pts=1320000|tag:lavfi.r128.M=-25.530|tag:lavfi.r128.S=-22.491|tag:lavfi.r128.I=-22.973|tag:lavfi.r128.LRA=4.990|tag:lavfi.r128.LRA.low=-26.240|tag:lavfi.r128.LRA.high=-21.250
+-pts=1324800|tag:lavfi.r128.M=-25.269|tag:lavfi.r128.S=-22.536|tag:lavfi.r128.I=-22.980|tag:lavfi.r128.LRA=4.990|tag:lavfi.r128.LRA.low=-26.240|tag:lavfi.r128.LRA.high=-21.250
+-pts=1329600|tag:lavfi.r128.M=-25.127|tag:lavfi.r128.S=-22.630|tag:lavfi.r128.I=-22.986|tag:lavfi.r128.LRA=4.990|tag:lavfi.r128.LRA.low=-26.240|tag:lavfi.r128.LRA.high=-21.250
+-pts=1334400|tag:lavfi.r128.M=-24.909|tag:lavfi.r128.S=-22.673|tag:lavfi.r128.I=-22.991|tag:lavfi.r128.LRA=4.990|tag:lavfi.r128.LRA.low=-26.240|tag:lavfi.r128.LRA.high=-21.250
+-pts=1339200
+Test filter-metadata-ebur128 failed. Look at tests/data/fate/filter-metadata-ebur128.err for details.
+make: *** [tests/Makefile:323: fate-filter-metadata-ebur128] Error 1
+PASS fate-filter-metadata-avf-aphase-meter-out-of-phase
+PASS fate-pcm_dvd-16-5.1-48000
+FAIL fate-pcm_dvd-24-2-48000
+--- ./tests/ref/fate/pcm_dvd-24-2-48000	2026-11-17 23:30:44.725581100 +0000
++++ tests/data/fate/pcm_dvd-24-2-48000	2026-11-18 19:55:54.665175180 +0000
+@@ -1,5 +1,5 @@
+-6fcd235f0c165f2c5f4431f9e0d60d28 *tests/data/fate/pcm_dvd-24-2-48000.vob
+-8218624 tests/data/fate/pcm_dvd-24-2-48000.vob
++da3cba60fd0935cde29a99554ca4ca6a *tests/data/fate/pcm_dvd-24-2-48000.vob
++6416384 tests/data/fate/pcm_dvd-24-2-48000.vob
+ #tb 0: 1/48000
+ #media_type 0: audio
+ #codec_id 0: pcm_s24le
+Test pcm_dvd-24-2-48000 failed. Look at tests/data/fate/pcm_dvd-24-2-48000.err for details.
+make: *** [tests/Makefile:323: fate-pcm_dvd-24-2-48000] Error 1
+PASS fate-matroska-flac-extradata-update
+PASS fate-ogg-flac-chained-meta
+PASS fate-ogg-flac-copy-chained-meta
+PASS fate-matroska-flac-channel-mapping
+PASS fate-cover-art-flac
+FAIL fate-flac-16-chmode-indep
+TEST    flac-16-chmode-indep
+stddev:    0.00 PSNR:999.99 MAXDIFF:    0 bytes:  1675800/  1179648
+size: |1675800 - 1179648| >= 0
+Test flac-16-chmode-indep failed. Look at tests/data/fate/flac-16-chmode-indep.err for details.
+make: *** [tests/Makefile:323: fate-flac-16-chmode-indep] Error 1
+FAIL fate-flac-16-chmode-left_side
+TEST    flac-16-chmode-left_side
+stddev:    0.00 PSNR:999.99 MAXDIFF:    0 bytes:  1675800/  1179648
+size: |1675800 - 1179648| >= 0
+Test flac-16-chmode-left_side failed. Look at tests/data/fate/flac-16-chmode-left_side.err for details.
+make: *** [tests/Makefile:323: fate-flac-16-chmode-left_side] Error 1
+FAIL fate-flac-16-chmode-mid_side
+TEST    flac-16-chmode-mid_side
+stddev:    0.00 PSNR:999.99 MAXDIFF:    0 bytes:  1675800/  1179648
+size: |1675800 - 1179648| >= 0
+Test flac-16-chmode-mid_side failed. Look at tests/data/fate/flac-16-chmode-mid_side.err for details.
+make: *** [tests/Makefile:323: fate-flac-16-chmode-mid_side] Error 1
+FAIL fate-flac-16-chmode-right_side
+TEST    flac-16-chmode-right_side
+stddev:    0.00 PSNR:999.99 MAXDIFF:    0 bytes:  1675800/  1179648
+size: |1675800 - 1179648| >= 0
+Test flac-16-chmode-right_side failed. Look at tests/data/fate/flac-16-chmode-right_side.err for details.
+make: *** [tests/Makefile:323: fate-flac-16-chmode-right_side] Error 1
+FAIL fate-flac-16-fixed
+TEST    flac-16-fixed
+stddev:    0.00 PSNR:999.99 MAXDIFF:    0 bytes:  1675800/  1179648
+size: |1675800 - 1179648| >= 0
+Test flac-16-fixed failed. Look at tests/data/fate/flac-16-fixed.err for details.
+make: *** [tests/Makefile:323: fate-flac-16-fixed] Error 1
+FAIL fate-flac-16-lpc-cholesky
+TEST    flac-16-lpc-cholesky
+stddev:    0.00 PSNR:999.99 MAXDIFF:    0 bytes:  1675800/  1179648
+size: |1675800 - 1179648| >= 0
+Test flac-16-lpc-cholesky failed. Look at tests/data/fate/flac-16-lpc-cholesky.err for details.
+make: *** [tests/Makefile:323: fate-flac-16-lpc-cholesky] Error 1
+FAIL fate-flac-16-lpc-levinson
+TEST    flac-16-lpc-levinson
+stddev:    0.00 PSNR:999.99 MAXDIFF:    0 bytes:  1675800/  1179648
+size: |1675800 - 1179648| >= 0
+Test flac-16-lpc-levinson failed. Look at tests/data/fate/flac-16-lpc-levinson.err for details.
+make: *** [tests/Makefile:323: fate-flac-16-lpc-levinson] Error 1
+FAIL fate-flac-24-comp-8
+TEST    flac-24-comp-8
+stddev:    0.00 PSNR:999.99 MAXDIFF:    0 bytes: 11520000/  6291456
+size: |11520000 - 6291456| >= 0
+Test flac-24-comp-8 failed. Look at tests/data/fate/flac-24-comp-8.err for details.
+make: *** [tests/Makefile:323: fate-flac-24-comp-8] Error 1
+PASS fate-flac-32-wasted-bits
+PASS fate-flac-rice-params
+FAIL fate-acodec-flac
+TEST    acodec-flac
+--- ./tests/ref/acodec/flac	2026-11-17 23:30:44.205719100 +0000
++++ tests/data/fate/acodec-flac	2026-11-18 19:56:01.148659975 +0000
+@@ -1,4 +1,4 @@
+ 151eef9097f944726968bec48649f00a *tests/data/fate/acodec-flac.flac
+ 361582 tests/data/fate/acodec-flac.flac
+-95e54b261530a1bcf6de6fe3b21dc5f6 *tests/data/fate/acodec-flac.out.wav
+-stddev:    0.00 PSNR:999.99 MAXDIFF:    0 bytes:  1058400/  1058400
++17acdee3e2fb76301e186c8253a7ea14 *tests/data/fate/acodec-flac.out.wav
++stddev: 8837.47 PSNR: 17.40 MAXDIFF:42547 bytes:  1058400/   763488
+Test acodec-flac failed. Look at tests/data/fate/acodec-flac.err for details.
+make: *** [tests/Makefile:323: fate-acodec-flac] Error 1
+FAIL fate-acodec-flac-exact-rice
+TEST    acodec-flac-exact-rice
+--- ./tests/ref/acodec/flac-exact-rice	2026-11-17 23:30:44.206719100 +0000
++++ tests/data/fate/acodec-flac-exact-rice	2026-11-18 19:56:01.501182403 +0000
+@@ -1,4 +1,4 @@
+ aab144de213ae684ca008a3e0afe5e28 *tests/data/fate/acodec-flac-exact-rice.flac
+ 360454 tests/data/fate/acodec-flac-exact-rice.flac
+-95e54b261530a1bcf6de6fe3b21dc5f6 *tests/data/fate/acodec-flac-exact-rice.out.wav
+-stddev:    0.00 PSNR:999.99 MAXDIFF:    0 bytes:  1058400/  1058400
++17acdee3e2fb76301e186c8253a7ea14 *tests/data/fate/acodec-flac-exact-rice.out.wav
++stddev: 8837.47 PSNR: 17.40 MAXDIFF:42547 bytes:  1058400/   763488
+Test acodec-flac-exact-rice failed. Look at tests/data/fate/acodec-flac-exact-rice.err for details.
+make: *** [tests/Makefile:323: fate-acodec-flac-exact-rice] Error 1
+FAIL fate-api-flac
+LD	tests/api/api-flac-test
+TEST    api-flac
+Test api-flac failed. Look at tests/data/fate/api-flac.err for details.
+make: *** [tests/Makefile:323: fate-api-flac] Error 1
+PASS fate-lavf-ogg
+FAIL fate-seek-acodec-flac
+TEST    acodec-flac
+--- ./tests/ref/acodec/flac	2026-11-17 23:30:44.205719100 +0000
++++ tests/data/fate/acodec-flac	2026-11-18 19:56:04.139529504 +0000
+@@ -1,4 +1,4 @@
+ 151eef9097f944726968bec48649f00a *tests/data/fate/acodec-flac.flac
+ 361582 tests/data/fate/acodec-flac.flac
+-95e54b261530a1bcf6de6fe3b21dc5f6 *tests/data/fate/acodec-flac.out.wav
+-stddev:    0.00 PSNR:999.99 MAXDIFF:    0 bytes:  1058400/  1058400
++17acdee3e2fb76301e186c8253a7ea14 *tests/data/fate/acodec-flac.out.wav
++stddev: 8837.47 PSNR: 17.40 MAXDIFF:42547 bytes:  1058400/   763488
+Test acodec-flac failed. Look at tests/data/fate/acodec-flac.err for details.
+make: *** [tests/Makefile:323: fate-acodec-flac] Error 1
+PASS fate-seek-lavf-ogg
+FATE flac: 13 passed, 23 failed

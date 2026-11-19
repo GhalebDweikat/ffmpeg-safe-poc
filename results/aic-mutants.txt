@@ -1,0 +1,13 @@
+mutant                               unit tests  FATE real sample  FATE encoder tests  differential fuzz (10 s)
+x86 IDCT: rows cut, not saturated    missed      missed            -                   caught: MISMATCH case=3 
+x86 IDCT: rounding added in 32 bits  missed      missed            -                   caught: MISMATCH case=3 
+row with one coefficient transformed missed      missed            -                   caught: MISMATCH case=12 
+buffer cleared for every slice       caught      missed            -                   caught: MISMATCH case=5 
+reader goes on past the slice end    caught      missed            -                   caught: MISMATCH case=3 
+longest Exp-Golomb code rejected     missed      missed            -                   caught: MISMATCH case=2 
+last row not moved up to the edge    missed      caught            -                   caught: MISMATCH case=17 
+luma not moved on interlace change   missed      missed            -                   caught: MISMATCH case=27 
+one quantisation matrix entry wrong  missed      caught            -                   caught: MISMATCH case=2 
+-- good library restored; FATE again:
+PASS fate-aic
+PASS fate-aic-oddsize

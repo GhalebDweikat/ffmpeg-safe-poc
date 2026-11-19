@@ -1,0 +1,25 @@
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+    Finished `release` profile [optimized] target(s) in 3.14s
+== fuzz gate (8s per process)
+RESULT codec=magicyuv seed=17357 mode=mutate-real cases=58368 packets=262539 decoded=107479 rejected=155060 refused_configs=0 accepted=0 invalid=0 header_size=0
+RESULT codec=magicyuv seed=206501 mode=generated cases=2624 packets=11702 decoded=7569 rejected=4133 refused_configs=0 accepted=7569 invalid=1692 header_size=12
+RESULT codec=magicyuv seed=12343 mode=mutate-real cases=10176 packets=45619 decoded=32216 rejected=13403 refused_configs=0 accepted=0 invalid=0 header_size=0 ve
+RESULT codec=magicyuv seed=102614 mode=generated cases=2560 packets=11645 decoded=7447 rejected=4198 refused_configs=0 accepted=7447 invalid=1670 header_size=14
+RESULT codec=magicyuv seed=205073 mode=generated cases=2752 packets=12229 decoded=7967 rejected=4262 refused_configs=0 accepted=7967 invalid=1728 header_size=13
+RESULT codec=magicyuv seed=258352 mode=generated cases=2816 packets=12885 decoded=8325 rejected=4560 refused_configs=0 accepted=8325 invalid=1807 header_size=13
+RESULT codec=magicyuv seed=16001 mode=mutate-real cases=1984 packets=8913 decoded=7403 rejected=1510 refused_configs=0 accepted=0 invalid=0 header_size=0 versio
+== bench
+input                  size      frames   C us/frame  Rust us/frame   Rust/C    (min)
+path:left8             1280x720      60      5123.11        4217.21    0.823    0.821
+path:gradient8         1280x720      60      5122.87        4225.19    0.825    0.815
+path:median8           1280x720      60      8905.84        7473.14    0.839    0.843
+path:left8-noisy       1280x720      60     10878.79        8858.36    0.814    0.812
+path:left8-rgb         1280x720      60      5078.37        4113.30    0.810    0.814
+path:median8-int       1280x720      60      8471.26        7090.01    0.837    0.835
+path:raw8              1280x720      60       298.25         478.33    1.604    1.584
+path:longcodes8        1280x720      60     23494.93       21664.25    0.922    1.012
+path:left10            1280x720      60     11626.17       10703.69    0.921    0.900
+path:gradient10        1280x720      60     13858.02       12736.15    0.919    0.938
+path:median10          1280x720      60     19969.07       17601.40    0.881    0.887
+path:left12-rgb        1280x720      60     15950.78       13240.00    0.830    0.811
+path:raw10             1280x720      60      4508.78        5061.33    1.123    1.165

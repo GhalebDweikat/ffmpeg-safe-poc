@@ -1,0 +1,27 @@
+mutant                               unit tests  FATE real sample  FATE encoder tests  differential fuzz (10 s)
+16-bit copy not byte-swapped         caught      caught            missed              caught: MISMATCH case=15 
+1-bit: extra line not counted        caught      caught            missed              caught: MISMATCH case=3 
+limit is the visible end, not stride x height caught      missed            missed              caught: MISMATCH case=6 
+skip code off by one                 caught      caught            caught              caught: MISMATCH case=2 
+discard_damaged_percentage fixed at 95 caught      missed            missed              caught: MISMATCH case=26 
+24-bit short packet: zeros per byte, not group caught      missed            missed              caught: MISMATCH case=364 
+write stops at the row end, not continued missed      missed            missed              caught: MISMATCH case=2 
+4-bit pixels swapped                 caught      caught            missed              caught: MISMATCH case=7 
+-- good library restored; FATE again:
+PASS fate-qtrle-1bit
+PASS fate-qtrle-2bit
+PASS fate-qtrle-4bit
+PASS fate-qtrle-8bit
+PASS fate-qtrle-16bit
+PASS fate-qtrle-24bit
+PASS fate-qtrle-32bit
+PASS fate-rgb24-mkv
+PASS fate-filter-fps
+PASS fate-filter-fps-cfr
+PASS fate-vsynth1-qtrle
+PASS fate-vsynth2-qtrle
+PASS fate-vsynth3-qtrle
+PASS fate-vsynth_lena-qtrle
+PASS fate-vsynth1-qtrlegray
+PASS fate-vsynth2-qtrlegray
+PASS fate-vsynth_lena-qtrlegray

@@ -1,0 +1,19 @@
+mutant                               unit tests  FATE real sample  FATE encoder tests  differential fuzz (10 s)
+joint entry stores only its symbols  caught      missed            missed              caught: MISMATCH case=5 
+no bits taken from past the slice    missed      missed            missed              caught: MISMATCH case=24 
+unused code gives symbol 0, not -1   caught      missed            missed              caught: MISMATCH case=81 
+AVX2 left: low half not carried      missed      caught            caught              caught: MISMATCH case=8 
+16-bit median: gradient masked       caught      missed            missed              caught: MISMATCH case=8 
+joint table: code below usable not tried missed      missed            missed              missed
+-- good library restored; FATE again:
+PASS fate-magicyuv-rgb
+PASS fate-magicyuv-rgba
+PASS fate-magicyuv-y400i
+PASS fate-magicyuv-y420
+PASS fate-magicyuv-y422i
+PASS fate-magicyuv-y444
+PASS fate-magicyuv-y4444i
+PASS fate-vsynth1-magicyuv
+PASS fate-vsynth2-magicyuv
+PASS fate-vsynth3-magicyuv
+PASS fate-vsynth_lena-magicyuv

@@ -1,0 +1,15 @@
+FLAC_PRESET_FLT=flac difffuzz flac 1 10:
+FLAC_PRESET_FLT=flac difffuzz flac 2 10:
+FLAC_PRESET_FLT=flac difffuzz flac 3 10:
+FLAC_PRESET_FLT=flac_rs difffuzz flac 1 10:
+MISMATCH seed=1 case=1768 packet=1 what="return codes" size=0x0 bits=0 c=(-22,0) rs=(-558323010,0) len=477 (saved mismatch.bin)
+FLAC_PRESET_FLT=flac_rs difffuzz flac 2 10:
+MISMATCH seed=2 case=4672 packet=1 what="return codes" size=0x0 bits=0 c=(-22,0) rs=(-558323010,0) len=308 (saved mismatch.bin)
+FLAC_PRESET_FLT=flac_rs difffuzz flac 3 10:
+MISMATCH seed=3 case=597 packet=3 what="return codes" size=0x0 bits=0 c=(-22,0) rs=(-558323010,0) len=2179 (saved mismatch.bin)
+FLAC_PRESET_FLT=flac difffuzz flac 1 10: exit status 139 (139 = killed by SIGSEGV)
+bash: line 1: 319804 Segmentation fault      (core dumped) FLAC_PRESET_FLT=flac /build/w/flac/difffuzz-flt flac $s 10 > /dev/null 2>&1
+bash: line 1: 319805 Segmentation fault      (core dumped) FLAC_PRESET_FLT=flac /build/w/flac/difffuzz-flt flac $s 10 > /dev/null 2>&1
+FLAC_PRESET_FLT=flac difffuzz flac 2 10: exit status 139 (139 = killed by SIGSEGV)
+bash: line 1: 319806 Segmentation fault      (core dumped) FLAC_PRESET_FLT=flac /build/w/flac/difffuzz-flt flac $s 10 > /dev/null 2>&1
+FLAC_PRESET_FLT=flac difffuzz flac 3 10: exit status 139 (139 = killed by SIGSEGV)

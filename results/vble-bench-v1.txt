@@ -1,0 +1,8 @@
+RESULT codec=vble seed=62241 mode=generated cases=3392 packets=15522 decoded=10881 rejected=4641 refused_configs=0 mismatches=0 panics=0
+RESULT codec=vble seed=11984 mode=mutate-real cases=64 packets=301 decoded=172 rejected=129 refused_configs=0 mismatches=0 panics=0
+== bench
+input                  size      frames   C us/frame  Rust us/frame   Rust/C    (min)
+path:random            1280x720      60     13229.56       13901.64    1.051    1.059
+path:smooth            1280x720      60     13878.39       14789.44    1.066    1.071
+path:flat              1280x720      60     10020.30       10413.61    1.039    1.048
+real-flowers           1280x720       4     15565.48       16948.02    1.089    1.057

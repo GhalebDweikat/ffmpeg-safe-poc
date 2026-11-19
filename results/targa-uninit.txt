@@ -1,0 +1,16 @@
+# results/targa-uninit-repro.tga: 4x1, 24 bits, run-length coded. A run of 2 with pixel aa bb cc, then a run of 2 whose pixel value is cut off after its first byte (11).
+0000000 00 00 0a 00 00 00 00 00 00 00 00 00 04 00 01 00
+0000016 18 20 81 aa bb cc 81 11
+0000024
+== ffmpeg -c:v targa -i targa-uninit-repro.tga -f rawvideo -pix_fmt bgr24 - | od -A n -t x1
+ aa bb cc aa bb cc 11 bb cc 11 bb cc
+== ffmpeg -c:v targa_rs -i targa-uninit-repro.tga -f rawvideo -pix_fmt bgr24 - | od -A n -t x1
+ aa bb cc aa bb cc 11 00 00 11 00 00
+
+# Differential fuzz with the avoidance in harness/codec_targa.c switched off (TARGA_FUZZ_UNINIT=1), 5 s per seed:
+MISMATCH seed=1 case=994 packet=0 what="plane 0" size=48x5 bits=0 c=(0,0) rs=(0,0) len=662 (saved mismatch.bin)
+MISMATCH seed=2 case=1651 packet=3 what="plane 0" size=63x5 bits=0 c=(0,0) rs=(0,0) len=704 (saved mismatch.bin)
+MISMATCH seed=3 case=350 packet=0 what="plane 0" size=3x2 bits=0 c=(0,0) rs=(0,0) len=23 (saved mismatch.bin)
+MISMATCH seed=4 case=1947 packet=0 what="plane 0" size=12x7 bits=0 c=(0,0) rs=(0,0) len=70 (saved mismatch.bin)
+MISMATCH seed=5 case=728 packet=0 what="plane 0" size=32x6 bits=0 c=(0,0) rs=(0,0) len=33 (saved mismatch.bin)
+MISMATCH seed=6 case=786 packet=0 what="plane 0" size=12x7 bits=0 c=(0,0) rs=(0,0) len=23 (saved mismatch.bin)

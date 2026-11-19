@@ -1,0 +1,21 @@
+== unit tests, debug build
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+== library with overflow checks
+    Finished `release` profile [optimized] target(s) in 7.02s
+codec: rpza; processes: 10, 60s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 10
+cases            6016768
+packets          27068676
+decoded          10684478
+rejected         16384198
+refused_configs  0
+ok               7833861
+too_small        252725
+four_trunc       1904610
+sixteen_trunc    3842455
+no_blocks        3097110
+unknown_op       4445133
+mismatches       0
+panics           0

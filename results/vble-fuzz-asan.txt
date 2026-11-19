@@ -1,0 +1,14 @@
+libavformat/protocol_list.c is unchanged
+ffbuild/config.sh is unchanged
+CC	libavutil/error.o
+-rwxr-xr-x 1 root root 18314064 Nov 19 01:15 /build/harness/difffuzz-asan
+codec: vble; processes: 7, 90s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 7
+cases            749888
+packets          3375249
+decoded          2366550
+rejected         1008699
+refused_configs  0
+mismatches       0
+panics           0

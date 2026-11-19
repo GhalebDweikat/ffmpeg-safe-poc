@@ -1,3 +1,8 @@
+== aic: decoder FFmpeg picks by default
+  Stream #0:1 -> #0:0 (aic (aic_rs) -> wrapped_avframe (native))
+PASS fate-aic
+PASS fate-aic-oddsize
+FATE aic: 2 passed, 0 failed
 == cinepak: decoder FFmpeg picks by default
   Stream #0:0 -> #0:0 (cinepak (cinepak_rs) -> wrapped_avframe (native))
 PASS fate-cvid-palette
@@ -9,6 +14,64 @@ PASS fate-vsynth1-cinepak
 PASS fate-vsynth2-cinepak
 PASS fate-vsynth_lena-cinepak
 FATE cinepak: 8 passed, 0 failed
+== flac: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (flac (flac_rs) -> pcm_s16le (native))
+PASS fate-filter-hdcd-mix
+PASS fate-filter-hdcd-mix-psoff
+PASS fate-filter-hdcd-analyze-pe
+PASS fate-filter-hdcd-analyze-lle
+PASS fate-filter-hdcd-analyze-cdt
+PASS fate-filter-hdcd-analyze-tgm
+PASS fate-filter-hdcd-analyze-ltgm
+PASS fate-filter-hdcd-analyze-pel
+PASS fate-filter-hdcd-false-positive
+PASS fate-filter-hdcd-detect-errors
+PASS fate-filter-hdcd-20bit
+PASS fate-filter-metadata-ebur128
+PASS fate-filter-metadata-avf-aphase-meter-out-of-phase
+PASS fate-pcm_dvd-16-5.1-48000
+PASS fate-pcm_dvd-24-2-48000
+PASS fate-matroska-flac-extradata-update
+PASS fate-ogg-flac-chained-meta
+PASS fate-ogg-flac-copy-chained-meta
+PASS fate-matroska-flac-channel-mapping
+PASS fate-cover-art-flac
+PASS fate-flac-16-chmode-indep
+PASS fate-flac-16-chmode-left_side
+PASS fate-flac-16-chmode-mid_side
+PASS fate-flac-16-chmode-right_side
+PASS fate-flac-16-fixed
+PASS fate-flac-16-lpc-cholesky
+PASS fate-flac-16-lpc-levinson
+PASS fate-flac-24-comp-8
+PASS fate-flac-32-wasted-bits
+PASS fate-flac-rice-params
+PASS fate-acodec-flac
+PASS fate-acodec-flac-exact-rice
+PASS fate-api-flac
+PASS fate-lavf-ogg
+PASS fate-seek-acodec-flac
+PASS fate-seek-lavf-ogg
+FATE flac: 36 passed, 0 failed
+== loco: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (loco (loco_rs) -> wrapped_avframe (native))
+PASS fate-loco-rgb
+PASS fate-loco-yuy2
+FATE loco: 2 passed, 0 failed
+== magicyuv: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (magicyuv (magicyuv_rs) -> wrapped_avframe (native))
+PASS fate-magicyuv-rgb
+PASS fate-magicyuv-rgba
+PASS fate-magicyuv-y400i
+PASS fate-magicyuv-y420
+PASS fate-magicyuv-y422i
+PASS fate-magicyuv-y444
+PASS fate-magicyuv-y4444i
+PASS fate-vsynth1-magicyuv
+PASS fate-vsynth2-magicyuv
+PASS fate-vsynth3-magicyuv
+PASS fate-vsynth_lena-magicyuv
+FATE magicyuv: 11 passed, 0 failed
 == msrle: decoder FFmpeg picks by default
   Stream #0:0 -> #0:0 (msrle (msrle_rs) -> wrapped_avframe (native))
 PASS fate-msrle-8bit
@@ -17,6 +80,69 @@ PASS fate-vsynth2-msrle
 PASS fate-vsynth3-msrle
 PASS fate-vsynth_lena-msrle
 FATE msrle: 5 passed, 0 failed
+== msvideo1: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (msvideo1 (msvideo1_rs) -> wrapped_avframe (native))
+PASS fate-msvideo1-8bit
+PASS fate-msvideo1-16bit
+PASS fate-lavf-fate-cram.avi
+PASS fate-vsynth1-msvideo1
+PASS fate-vsynth2-msvideo1
+PASS fate-vsynth_lena-msvideo1
+FATE msvideo1: 6 passed, 0 failed
+== prores: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (prores (prores_rs) -> wrapped_avframe (native))
+PASS fate-prores-422
+PASS fate-prores-422_hq
+PASS fate-prores-422_lt
+PASS fate-prores-422_proxy
+PASS fate-prores-alpha
+PASS fate-prores-alpha_skip
+PASS fate-prores-transparency
+PASS fate-prores-transparency_skip
+PASS fate-prores-gray
+PASS fate-prores-probe
+PASS fate-mxf-probe-applehdr10
+PASS fate-vsynth1-prores
+PASS fate-vsynth2-prores
+PASS fate-vsynth3-prores
+PASS fate-vsynth_lena-prores
+PASS fate-vsynth1-prores_int
+PASS fate-vsynth2-prores_int
+PASS fate-vsynth3-prores_int
+PASS fate-vsynth_lena-prores_int
+PASS fate-vsynth1-prores_444
+PASS fate-vsynth2-prores_444
+PASS fate-vsynth3-prores_444
+PASS fate-vsynth_lena-prores_444
+PASS fate-vsynth1-prores_444_int
+PASS fate-vsynth2-prores_444_int
+PASS fate-vsynth3-prores_444_int
+PASS fate-vsynth_lena-prores_444_int
+PASS fate-vsynth1-prores_ks
+PASS fate-vsynth2-prores_ks
+PASS fate-vsynth3-prores_ks
+PASS fate-vsynth_lena-prores_ks
+FATE prores: 31 passed, 0 failed
+== qtrle: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (qtrle (qtrle_rs) -> wrapped_avframe (native))
+PASS fate-qtrle-1bit
+PASS fate-qtrle-2bit
+PASS fate-qtrle-4bit
+PASS fate-qtrle-8bit
+PASS fate-qtrle-16bit
+PASS fate-qtrle-24bit
+PASS fate-qtrle-32bit
+PASS fate-rgb24-mkv
+PASS fate-filter-fps
+PASS fate-filter-fps-cfr
+PASS fate-vsynth1-qtrle
+PASS fate-vsynth2-qtrle
+PASS fate-vsynth3-qtrle
+PASS fate-vsynth_lena-qtrle
+PASS fate-vsynth1-qtrlegray
+PASS fate-vsynth2-qtrlegray
+PASS fate-vsynth_lena-qtrlegray
+FATE qtrle: 17 passed, 0 failed
 == rpza: decoder FFmpeg picks by default
   Stream #0:0 -> #0:0 (rpza (rpza_rs) -> wrapped_avframe (native))
 PASS fate-rpza
@@ -25,6 +151,32 @@ PASS fate-vsynth2-rpza
 PASS fate-vsynth3-rpza
 PASS fate-vsynth_lena-rpza
 FATE rpza: 5 passed, 0 failed
+== targa: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (targa (targa_rs) -> wrapped_avframe (native))
+PASS fate-targa-conformance-CBW8
+PASS fate-targa-conformance-CCM8
+PASS fate-targa-conformance-CTC16
+PASS fate-targa-conformance-CTC24
+PASS fate-targa-conformance-CTC32
+PASS fate-targa-conformance-UBW8
+PASS fate-targa-conformance-UCM8
+PASS fate-targa-conformance-UTC16
+PASS fate-targa-conformance-UTC24
+PASS fate-targa-conformance-UTC32
+PASS fate-targa-top-to-bottom
+PASS fate-lavf-tga
+FATE targa: 12 passed, 0 failed
+== tta: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (tta (tta_rs) -> pcm_s16le (native))
+PASS fate-lossless-tta
+PASS fate-lossless-tta-encrypted
+PASS fate-filter-metadata-silencedetect
+PASS fate-ffmpeg-error-rate-fail
+PASS fate-ffmpeg-error-rate-pass
+PASS fate-acodec-tta
+PASS fate-lavf-tta
+PASS fate-lavf-mka
+FATE tta: 8 passed, 0 failed
 == v210: decoder FFmpeg picks by default
   Stream #0:0 -> #0:0 (v210 (v210_rs) -> wrapped_avframe (native))
 PASS fate-v210
@@ -37,3 +189,7 @@ PASS fate-vsynth2-v210-10
 PASS fate-vsynth3-v210-10
 PASS fate-vsynth_lena-v210-10
 FATE v210: 9 passed, 0 failed
+== vble: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (vble (vble_rs) -> wrapped_avframe (native))
+PASS fate-vble
+FATE vble: 1 passed, 0 failed

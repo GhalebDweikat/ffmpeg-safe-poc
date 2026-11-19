@@ -1,0 +1,15 @@
+== unit tests, debug build
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+== library with overflow checks
+    Finished `release` profile [optimized] target(s) in 0.39s
+codec: msrle; processes: 9, 60s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 9
+cases            5490624
+packets          24406837
+decoded          24275093
+rejected         131744
+refused_configs  67190
+mismatches       0
+panics           0

@@ -8,8 +8,37 @@ license = "LGPL-2.1-or-later"
 [lib]
 crate-type = ["staticlib"]
 
+# One feature per decoder, so that a decoder can be built and tested on its
+# own while others are being worked on. The default is all of them.
+[features]
+default = ["rpza", "msrle", "cinepak", "v210", "qtrle", "msvideo1", "targa", "vble", "loco", "magicyuv", "prores", "aic", "flac", "tta"]
+rpza = ["dep:rpza-core"]
+msrle = ["dep:msrle-core"]
+cinepak = ["dep:cinepak-core"]
+v210 = ["dep:v210-core"]
+qtrle = ["dep:qtrle-core"]
+msvideo1 = ["dep:msvideo1-core"]
+targa = ["dep:targa-core"]
+vble = ["dep:vble-core"]
+loco = ["dep:loco-core"]
+magicyuv = ["dep:magicyuv-core"]
+prores = ["dep:prores-core"]
+aic = ["dep:aic-core"]
+flac = ["dep:flac-core"]
+tta = ["dep:tta-core"]
+
 [dependencies]
-rpza-core = { path = "../rpza-core" }
-msrle-core = { path = "../msrle-core" }
-cinepak-core = { path = "../cinepak-core" }
-v210-core = { path = "../v210-core" }
+rpza-core = { path = "../rpza-core", optional = true }
+msrle-core = { path = "../msrle-core", optional = true }
+cinepak-core = { path = "../cinepak-core", optional = true }
+v210-core = { path = "../v210-core", optional = true }
+qtrle-core = { path = "../qtrle-core", optional = true }
+msvideo1-core = { path = "../msvideo1-core", optional = true }
+targa-core = { path = "../targa-core", optional = true }
+vble-core = { path = "../vble-core", optional = true }
+loco-core = { path = "../loco-core", optional = true }
+magicyuv-core = { path = "../magicyuv-core", optional = true }
+prores-core = { path = "../prores-core", optional = true }
+aic-core = { path = "../aic-core", optional = true }
+flac-core = { path = "../flac-core", optional = true }
+tta-core = { path = "../tta-core", optional = true }

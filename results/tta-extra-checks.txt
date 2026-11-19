@@ -1,0 +1,22 @@
+real-inside.tta tta -threads 1: MD5=d0beb768d860b4776358077dd9fcb1e9
+real-inside.tta tta_rs -threads 1: MD5=d0beb768d860b4776358077dd9fcb1e9
+real-inside.tta tta_rs -threads 4: MD5=d0beb768d860b4776358077dd9fcb1e9
+real-inside.tta tta -threads 4: MD5=d0beb768d860b4776358077dd9fcb1e9
+mix-s24-8ch-96k.mka tta -threads 1: MD5=7b4ca1f20dd191dbbcf97c821d6d86f9
+mix-s24-8ch-96k.mka tta_rs -threads 1: MD5=7b4ca1f20dd191dbbcf97c821d6d86f9
+mix-s24-8ch-96k.mka tta_rs -threads 4: MD5=7b4ca1f20dd191dbbcf97c821d6d86f9
+mix-s24-8ch-96k.mka tta -threads 4: MD5=7b4ca1f20dd191dbbcf97c821d6d86f9
+mix-u8-stereo.tta tta -threads 1: MD5=d85b5f5daeb1c4893e77acb4485ceb08
+mix-u8-stereo.tta tta_rs -threads 1: MD5=d85b5f5daeb1c4893e77acb4485ceb08
+mix-u8-stereo.tta tta_rs -threads 4: MD5=d85b5f5daeb1c4893e77acb4485ceb08
+mix-u8-stereo.tta tta -threads 4: MD5=d85b5f5daeb1c4893e77acb4485ceb08
+encrypted c:  MD5=5b6e2d6f1c507c4673e5b762c98c01cf
+encrypted rs4: MD5=5b6e2d6f1c507c4673e5b762c98c01cf
+ 01:36:47 up 10:36,  0 user,  load average: 9.94, 12.60, 11.17
+== portable decoder (TTA_RS_PORTABLE=1)
+file=synth:s16-silence:44100x1:40 c_us_per_frame=854.85 rs_us_per_frame=1037.50 rs_over_c_median=1.214 rs_over_c_min=1.329 
+file=synth:s16-tones:44100x1:40 c_us_per_frame=1944.88 rs_us_per_frame=1108.92 rs_over_c_median=0.570 rs_over_c_min=0.570 
+file=synth:s16-tones-1ch:44100x1:40 c_us_per_frame=1046.06 rs_us_per_frame=795.29 rs_over_c_median=0.760 rs_over_c_min=0.681 
+file=synth:s24-noise:44100x1:40 c_us_per_frame=2107.36 rs_us_per_frame=1257.72 rs_over_c_median=0.597 rs_over_c_min=0.555 
+file=clips/tta/real-inside.tta c_us_per_frame=1862.08 rs_us_per_frame=1064.38 rs_over_c_median=0.572 rs_over_c_min=0.558 
+file=clips/tta/mix-s16-6ch-48k.mka c_us_per_frame=3710.25 rs_us_per_frame=3470.56 rs_over_c_median=0.935 rs_over_c_min=0.990 

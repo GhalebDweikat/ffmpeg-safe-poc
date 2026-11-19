@@ -1,0 +1,10 @@
+codec: qtrle; processes: 13, 180s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 13
+cases            24595264
+packets          108768900
+decoded          88697277
+rejected         20071623
+refused_configs  427744
+mismatches       0
+panics           0

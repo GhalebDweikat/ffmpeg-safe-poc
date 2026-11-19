@@ -1,0 +1,26 @@
+mutant                               unit tests  FATE real sample  FATE encoder tests  differential fuzz (10 s)
+15-bit pictures mirrored too         caught      missed            missed              caught: MISMATCH case=5 
+interleave: later passes start a row late caught      missed            missed              caught: MISMATCH case=2 
+missing literal pixels zeroed, not kept caught      missed            missed              caught: MISMATCH case=151 
+16-bit palette: low bits not filled  caught      caught            missed              caught: MISMATCH case=4 
+
+thread '<unnamed>' (189512) panicked at targa-core/src/lib.rs:464:56:
+range end index 1028 out of range for slice of length 1024
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+palette bound off by one             caught      missed            missed              caught: MISMATCH case=760 
+colour map fields kept without a map caught      missed            missed              caught: MISMATCH case=2 
+pixels after the last row accepted   caught      missed            missed              caught: MISMATCH case=3 
+raw size not checked after colour map missed      missed            missed              caught: MISMATCH case=3 
+-- good library restored; FATE again:
+PASS fate-targa-conformance-CBW8
+PASS fate-targa-conformance-CCM8
+PASS fate-targa-conformance-CTC16
+PASS fate-targa-conformance-CTC24
+PASS fate-targa-conformance-CTC32
+PASS fate-targa-conformance-UBW8
+PASS fate-targa-conformance-UCM8
+PASS fate-targa-conformance-UTC16
+PASS fate-targa-conformance-UTC24
+PASS fate-targa-conformance-UTC32
+PASS fate-targa-top-to-bottom
+PASS fate-lavf-tga

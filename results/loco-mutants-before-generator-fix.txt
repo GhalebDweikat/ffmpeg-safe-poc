@@ -1,0 +1,10 @@
+mutant                               unit tests  FATE real sample  FATE encoder tests  differential fuzz (10 s)
+read past the packet end accepted    caught      missed            -                   caught: MISMATCH case=11 
+Rice parameter capped at 8, not 9    caught      missed            -                   caught: MISMATCH case=3 
+zero run of 1 counted as a long run  caught      caught            -                   caught: MISMATCH case=2 
+odd-width RGB not sheared back       missed      missed            -                   caught: MISMATCH case=6 
+lossy offset not added               caught      missed            -                   caught: MISMATCH case=2 
+code value of all ones not an error  missed      missed            -                   missed
+-- good library restored; FATE again:
+PASS fate-loco-rgb
+PASS fate-loco-yuy2

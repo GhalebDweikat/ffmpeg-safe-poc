@@ -1,0 +1,17 @@
+mutant                               unit tests  FATE real sample  FATE encoder tests  differential fuzz (10 s)
+SSE filter: one sign-step constant wrong missed      caught            caught              caught: MISMATCH case=2 
+portable filter: wrong mask for dx[7] caught      missed            missed              caught: MISMATCH case=1 
+value overflow check dropped         missed      missed            missed              caught: MISMATCH case=147 
+second Rice parameter adapted when unused caught      missed            caught              caught: MISMATCH case=2 
+8-bit streams use the 16-bit predictor caught      missed            missed              caught: MISMATCH case=1 
+31 bits accepted in place of the CRC missed      missed            missed              caught: MISMATCH case=95 
+end of packet: bit window may fill to 64 bits caught      missed            missed              caught: MISMATCH case=2503 
+-- good library restored; FATE again:
+PASS fate-lossless-tta
+PASS fate-lossless-tta-encrypted
+PASS fate-filter-metadata-silencedetect
+PASS fate-ffmpeg-error-rate-fail
+PASS fate-ffmpeg-error-rate-pass
+PASS fate-acodec-tta
+PASS fate-lavf-tta
+PASS fate-lavf-mka

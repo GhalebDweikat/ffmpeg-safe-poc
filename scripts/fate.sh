@@ -14,9 +14,13 @@ for c in ${@:-$ALL_CODECS}; do
         mkdir -p "$SAMPLES/$(dirname "$f")"
         [ -s "$SAMPLES/$f" ] || curl -fsSL "https://fate-suite.ffmpeg.org/$f" -o "$SAMPLES/$f"
     done
-    first=$SAMPLES/${FATE_SAMPLES%% *}
+    # The first sample listed should be a file of this codec: decoding a
+    # little of it shows which decoder FFmpeg picks when not told.
     echo "== $c: decoder FFmpeg picks by default"
-    ./ffmpeg -hide_banner -i "$first" -an -frames:v 1 -f null - 2>&1 | grep -E "Stream #0:[0-9]+ ->" | head -n 1
+    if [ -n "$FATE_SAMPLES" ]; then
+        ./ffmpeg -hide_banner -i "$SAMPLES/${FATE_SAMPLES%% *}" -t 0.2 -f null - 2>&1 |
+            grep -E "Stream #0:[0-9]+ ->.*\($C_DECODER " | head -n 1
+    fi
     pass=0; fail=0
     for t in $FATE_REAL $FATE_ENC; do
         if make "$t" SAMPLES="$SAMPLES" >"/tmp/$t.log" 2>&1; then

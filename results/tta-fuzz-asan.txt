@@ -1,0 +1,14 @@
+libavformat/protocol_list.c is unchanged
+ffbuild/config.sh is unchanged
+CC	libavutil/error.o
+-rwxr-xr-x 1 root root 25013768 Nov 19 03:05 /build/harness/difffuzz-asan
+codec: tta; processes: 8, 150s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 8
+cases            273408
+packets          1088419
+decoded          520703
+rejected         567716
+refused_configs  31919
+mismatches       0
+panics           0

@@ -1,0 +1,16 @@
+mutant                               unit tests  FATE real sample  FATE encoder tests  differential fuzz (10 s)
+skip count 0 skips one block only    caught      missed            missed              caught: MISMATCH case=17 
+skip run one block too long          caught      caught            caught              caught: MISMATCH case=2 
+palette 8-colour code from 0x88      caught      missed            missed              caught: MISMATCH case=2 
+16-bit 8-colour: top uses bottom's   caught      caught            caught              caught: MISMATCH case=1 
+cut-off packet still sets palette    caught      missed            missed              caught: MISMATCH case=8 
+16-bit 1-colour loses its top bit    caught      missed            missed              caught: MISMATCH case=1 
+packet size check off by one         caught      missed            missed              caught: MISMATCH case=50 
+skipped block row not counted        caught      caught            missed              caught: MISMATCH case=2 
+-- good library restored; FATE again:
+PASS fate-msvideo1-8bit
+PASS fate-msvideo1-16bit
+PASS fate-lavf-fate-cram.avi
+PASS fate-vsynth1-msvideo1
+PASS fate-vsynth2-msvideo1
+PASS fate-vsynth_lena-msvideo1

@@ -1,0 +1,22 @@
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+    Finished `release` profile [optimized] target(s) in 2.90s
+== fuzz gate (8s per process)
+RESULT codec=loco seed=14059 mode=mutate-real cases=1920 packets=8653 decoded=4377 rejected=4276 refused_configs=0 mismatches=0 panics=0
+RESULT codec=loco seed=85922 mode=generated cases=12416 packets=49655 decoded=30654 rejected=19001 refused_configs=1276 mismatches=0 panics=0
+RESULT codec=loco seed=27614 mode=generated cases=12160 packets=49187 decoded=30239 rejected=18948 refused_configs=1275 mismatches=0 panics=0
+RESULT codec=loco seed=233421 mode=generated cases=12160 packets=49038 decoded=30157 rejected=18881 refused_configs=1290 mismatches=0 panics=0
+RESULT codec=loco seed=8224 mode=mutate-real cases=1152 packets=5354 decoded=3615 rejected=1739 refused_configs=0 mismatches=0 panics=0
+RESULT codec=loco seed=302703 mode=generated cases=11904 packets=48259 decoded=29741 rejected=18518 refused_configs=1219 mismatches=0 panics=0
+== bench
+input                  size      frames   C us/frame  Rust us/frame   Rust/C    (min)
+path:flat-yuy2         1280x720      12      3915.28        3417.21    0.873    0.870
+path:screen-yuy2       1280x720      12      6684.23        6579.45    0.984    1.006
+path:clean-yuy2        1280x720      12     15978.84       14901.60    0.933    0.948
+path:photo-yuy2        1280x720      12     13609.98       14668.67    1.078    1.051
+path:noise-yuy2        1280x720      12     13036.85       15491.80    1.188    1.125
+path:photo-yv12        1280x720      12      9151.99       10068.64    1.100    1.096
+path:photo-rgb         1280x720      12     20005.18       21122.20    1.056    1.060
+path:photo-rgba        1280x720      12     33708.40       37855.16    1.123    1.087
+path:photo-rgbodd      1280x720      12     30353.09       35895.54    1.183    1.187
+real-pig-rgb           188x128        5       631.13         850.71    1.348    1.157
+real-pig-yuy2          188x128        3       527.01         564.88    1.072    1.102

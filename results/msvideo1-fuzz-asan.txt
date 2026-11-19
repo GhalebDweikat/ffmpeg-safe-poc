@@ -1,0 +1,17 @@
+libavformat/protocol_list.c is unchanged
+ffbuild/config.sh is unchanged
+CC	libavutil/error.o
+-rwxr-xr-x 1 root root 18746352 Nov 19 01:28 /build/harness/difffuzz-asan
+codec: msvideo1; processes: 9, 90s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 9
+cases            3358848
+packets          14880303
+decoded          14869273
+rejected         11030
+refused_configs  51495
+finished         7350472
+ran_out          3219922
+too_small        10205
+mismatches       0
+panics           0

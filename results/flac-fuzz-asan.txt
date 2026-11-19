@@ -1,0 +1,11 @@
+-rwxr-xr-x 1 root root 28358032 Nov 19 18:55 /build/harness/difffuzz-asan
+codec: flac; processes: 15, 120s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 15
+cases            4049536
+packets          17757881
+decoded          9219064
+rejected         8713646
+refused_configs  103070
+mismatches       0
+panics           0

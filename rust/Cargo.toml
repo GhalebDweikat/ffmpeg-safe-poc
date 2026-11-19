@@ -1,5 +1,21 @@
 [workspace]
-members = ["rpza-core", "msrle-core", "cinepak-core", "v210-core", "ffsafe-ffi"]
+members = [
+    "rpza-core",
+    "msrle-core",
+    "cinepak-core",
+    "v210-core",
+    "qtrle-core",
+    "msvideo1-core",
+    "targa-core",
+    "vble-core",
+    "loco-core",
+    "magicyuv-core",
+    "prores-core",
+    "aic-core",
+    "flac-core",
+    "tta-core",
+    "ffsafe-ffi",
+]
 resolver = "2"
 
 [profile.release]

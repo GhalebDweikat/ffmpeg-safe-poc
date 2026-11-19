@@ -1,0 +1,13 @@
+codec: msvideo1; processes: 13, 180s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 13
+cases            25444032
+packets          112541495
+decoded          112451016
+rejected         90479
+refused_configs  437908
+finished         62162536
+ran_out          27215915
+too_small        85801
+mismatches       0
+panics           0

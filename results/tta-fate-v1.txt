@@ -1,0 +1,11 @@
+== tta: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (tta (tta_rs) -> pcm_s16le (native))
+PASS fate-lossless-tta
+PASS fate-lossless-tta-encrypted
+PASS fate-filter-metadata-silencedetect
+PASS fate-ffmpeg-error-rate-fail
+PASS fate-ffmpeg-error-rate-pass
+PASS fate-acodec-tta
+PASS fate-lavf-tta
+PASS fate-lavf-mka
+FATE tta: 8 passed, 0 failed

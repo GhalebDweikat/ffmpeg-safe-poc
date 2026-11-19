@@ -1,0 +1,8 @@
+    Finished `release` profile [optimized] target(s) in 5.48s
+== fuzz gate (20s per process)
+RESULT codec=loco seed=250822 mode=generated cases=26816 packets=108630 decoded=66589 rejected=42041 refused_configs=2756 mismatches=0 panics=0
+RESULT codec=loco seed=66571 mode=generated cases=26752 packets=107933 decoded=66281 rejected=41652 refused_configs=2731 mismatches=0 panics=0
+RESULT codec=loco seed=324733 mode=generated cases=26304 packets=106277 decoded=65497 rejected=40780 refused_configs=2670 mismatches=0 panics=0
+RESULT codec=loco seed=215874 mode=generated cases=26496 packets=106218 decoded=65365 rejected=40853 refused_configs=2831 mismatches=0 panics=0
+RESULT codec=loco seed=31775 mode=mutate-real cases=4672 packets=21111 decoded=10637 rejected=10474 refused_configs=0 mismatches=0 panics=0
+RESULT codec=loco seed=10714 mode=mutate-real cases=2944 packets=13202 decoded=8796 rejected=4406 refused_configs=0 mismatches=0 panics=0

@@ -1,0 +1,15 @@
+== unit tests, debug build
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+== library with overflow checks
+    Finished `release` profile [optimized] target(s) in 0.37s
+codec: qtrle; processes: 8, 60s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 8
+cases            4204096
+packets          18614479
+decoded          15434192
+rejected         3180287
+refused_configs  66572
+mismatches       0
+panics           0

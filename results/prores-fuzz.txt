@@ -1,0 +1,10 @@
+codec: prores; processes: 13, 400s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 13
+cases            5204544
+packets          23420158
+decoded          9702942
+rejected         13717216
+refused_configs  0
+mismatches       0
+panics           0

@@ -1,0 +1,5 @@
+== loco: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (loco (loco_rs) -> wrapped_avframe (native))
+PASS fate-loco-rgb
+PASS fate-loco-yuy2
+FATE loco: 2 passed, 0 failed

@@ -1,0 +1,39 @@
+mutant                               unit tests  FATE real sample  FATE encoder tests  differential fuzz (10 s)
+AVX2 IDCT: one constant wrong        missed      caught            caught              caught: MISMATCH case=2 
+portable IDCT: row rounding in 32 bits caught      missed            missed              caught: MISMATCH case=604 
+12-bit DC-only row shortcut removed  missed      missed            missed              caught: MISMATCH case=12 
+end-of-data test on a refilled window missed      missed            missed              caught: MISMATCH case=3 
+second field on the first field's rows caught      caught            caught              caught: MISMATCH case=4 
+scaled quantiser saturates, not wraps missed      missed            missed              caught: MISMATCH case=3 
+-- good library restored; FATE again:
+PASS fate-prores-422
+PASS fate-prores-422_hq
+PASS fate-prores-422_lt
+PASS fate-prores-422_proxy
+PASS fate-prores-alpha
+PASS fate-prores-alpha_skip
+PASS fate-prores-transparency
+PASS fate-prores-transparency_skip
+PASS fate-prores-gray
+PASS fate-prores-probe
+PASS fate-mxf-probe-applehdr10
+PASS fate-vsynth1-prores
+PASS fate-vsynth2-prores
+PASS fate-vsynth3-prores
+PASS fate-vsynth_lena-prores
+PASS fate-vsynth1-prores_int
+PASS fate-vsynth2-prores_int
+PASS fate-vsynth3-prores_int
+PASS fate-vsynth_lena-prores_int
+PASS fate-vsynth1-prores_444
+PASS fate-vsynth2-prores_444
+PASS fate-vsynth3-prores_444
+PASS fate-vsynth_lena-prores_444
+PASS fate-vsynth1-prores_444_int
+PASS fate-vsynth2-prores_444_int
+PASS fate-vsynth3-prores_444_int
+PASS fate-vsynth_lena-prores_444_int
+PASS fate-vsynth1-prores_ks
+PASS fate-vsynth2-prores_ks
+PASS fate-vsynth3-prores_ks
+PASS fate-vsynth_lena-prores_ks

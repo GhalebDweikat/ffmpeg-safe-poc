@@ -1,0 +1,25 @@
+codec: magicyuv; processes: 6, 300s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 6
+cases            2298496
+packets          10335737
+decoded          4997964
+rejected         5337773
+refused_configs  0
+accepted         695224
+invalid          153074
+header_size      11150
+version          13810
+format           9476
+slice_width      25734
+slice_height     4983
+slice_height_align 2806
+slice_count      131
+impossible_slice_height 1283
+impossible_height 11335
+huffman_codes    58323
+huffman_build    59091
+huffman_short    31053
+accepted_no_frame 0
+mismatches       0
+panics           0

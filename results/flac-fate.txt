@@ -1,0 +1,39 @@
+== flac: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (flac (flac_rs) -> pcm_s16le (native))
+PASS fate-filter-hdcd-mix
+PASS fate-filter-hdcd-mix-psoff
+PASS fate-filter-hdcd-analyze-pe
+PASS fate-filter-hdcd-analyze-lle
+PASS fate-filter-hdcd-analyze-cdt
+PASS fate-filter-hdcd-analyze-tgm
+PASS fate-filter-hdcd-analyze-ltgm
+PASS fate-filter-hdcd-analyze-pel
+PASS fate-filter-hdcd-false-positive
+PASS fate-filter-hdcd-detect-errors
+PASS fate-filter-hdcd-20bit
+PASS fate-filter-metadata-ebur128
+PASS fate-filter-metadata-avf-aphase-meter-out-of-phase
+PASS fate-pcm_dvd-16-5.1-48000
+PASS fate-pcm_dvd-24-2-48000
+PASS fate-matroska-flac-extradata-update
+PASS fate-ogg-flac-chained-meta
+PASS fate-ogg-flac-copy-chained-meta
+PASS fate-matroska-flac-channel-mapping
+PASS fate-cover-art-flac
+PASS fate-flac-16-chmode-indep
+PASS fate-flac-16-chmode-left_side
+PASS fate-flac-16-chmode-mid_side
+PASS fate-flac-16-chmode-right_side
+PASS fate-flac-16-fixed
+PASS fate-flac-16-lpc-cholesky
+PASS fate-flac-16-lpc-levinson
+PASS fate-flac-24-comp-8
+PASS fate-flac-32-wasted-bits
+PASS fate-flac-rice-params
+PASS fate-acodec-flac
+PASS fate-acodec-flac-exact-rice
+PASS fate-api-flac
+PASS fate-lavf-ogg
+PASS fate-seek-acodec-flac
+PASS fate-seek-lavf-ogg
+FATE flac: 36 passed, 0 failed

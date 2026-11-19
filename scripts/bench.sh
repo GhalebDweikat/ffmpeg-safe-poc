@@ -9,7 +9,7 @@ set -uo pipefail
 load_codec "${1:?codec}"
 
 PASSES=${2:-31}
-CPU=${3:-6}
+CPU=${3:-$BENCH_CPU}
 WHAT=${4:-all}
 
 row() { # label, bench argument

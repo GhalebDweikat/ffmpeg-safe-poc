@@ -1,0 +1,6 @@
+== aic (C)
+second frame alone:           U[0] = 128
+second frame after the first: U[0] = 148
+== aic_rs
+second frame alone:           U[0] = 128
+second frame after the first: U[0] = 148

@@ -1,0 +1,5 @@
+== aic: decoder FFmpeg picks by default
+  Stream #0:1 -> #0:0 (aic (aic_rs) -> wrapped_avframe (native))
+PASS fate-aic
+PASS fate-aic-oddsize
+FATE aic: 2 passed, 0 failed

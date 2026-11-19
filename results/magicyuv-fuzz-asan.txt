@@ -1,0 +1,26 @@
+-rwxr-xr-x 1 root root 28359720 Nov 19 19:11 /build/harness/difffuzz-asan
+codec: magicyuv; processes: 9, 90s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 9
+cases            417856
+packets          1879860
+decoded          941280
+rejected         938580
+refused_configs  0
+accepted         220262
+invalid          48495
+header_size      3600
+version          4248
+format           2888
+slice_width      8058
+slice_height     1602
+slice_height_align 867
+slice_count      53
+impossible_slice_height 419
+impossible_height 3737
+huffman_codes    18398
+huffman_build    18527
+huffman_short    9691
+accepted_no_frame 0
+mismatches       0
+panics           0

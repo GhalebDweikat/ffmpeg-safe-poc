@@ -1,0 +1,30 @@
+== unit tests, debug build
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+== library with overflow checks
+    Finished `release` profile [optimized] target(s) in 0.14s
+codec: magicyuv; processes: 8, 90s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 8
+cases            987520
+packets          4441588
+decoded          2192629
+rejected         2248959
+refused_configs  0
+accepted         467383
+invalid          103186
+header_size      7593
+version          9219
+format           6317
+slice_width      17222
+slice_height     3356
+slice_height_align 1908
+slice_count      90
+impossible_slice_height 869
+impossible_height 7754
+huffman_codes    39156
+huffman_build    39662
+huffman_short    20599
+accepted_no_frame 0
+mismatches       0
+panics           0

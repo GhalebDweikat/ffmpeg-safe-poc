@@ -1,0 +1,10 @@
+codec: tta; processes: 12, 900s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 12
+cases            6809344
+packets          27036924
+decoded          12949706
+rejected         14087218
+refused_configs  799588
+mismatches       0
+panics           0

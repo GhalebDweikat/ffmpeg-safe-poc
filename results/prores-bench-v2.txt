@@ -1,0 +1,36 @@
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+    Finished `release` profile [optimized] target(s) in 3.90s
+== fuzz gate (8s per process)
+RESULT codec=prores seed=68843 mode=generated cases=7936 packets=35614 decoded=15056 rejected=20558 refused_configs=0 mismatches=0 panics=0
+RESULT codec=prores seed=28933 mode=mutate-real cases=6336 packets=28728 decoded=18343 rejected=10385 refused_configs=0 mismatches=0 panics=0
+RESULT codec=prores seed=10912 mode=generated cases=8064 packets=36177 decoded=15213 rejected=20964 refused_configs=0 mismatches=0 panics=0
+RESULT codec=prores seed=260084 mode=generated cases=8064 packets=36342 decoded=15426 rejected=20916 refused_configs=0 mismatches=0 panics=0
+RESULT codec=prores seed=11510 mode=mutate-real cases=7808 packets=34740 decoded=22220 rejected=12520 refused_configs=0 mismatches=0 panics=0
+RESULT codec=prores seed=152961 mode=generated cases=8128 packets=36822 decoded=15404 rejected=21418 refused_configs=0 mismatches=0 panics=0
+RESULT codec=prores seed=5694 mode=mutate-real cases=64 packets=289 decoded=232 rejected=57 refused_configs=0 mismatches=0 panics=0
+== bench
+input                  size      frames   C us/frame  Rust us/frame   Rust/C    (min)
+path:dc-422            1280x720      12      1689.33        1596.74    0.945    0.895
+path:sparse-422        1280x720      12      3137.48        2809.35    0.895    0.925
+path:medium-422        1280x720      12      7051.26        6621.38    0.939    0.930
+path:dense-422         1280x720      12     19428.91       19093.19    0.983    0.961
+path:medium-422i       1280x720      12      7130.40        6757.52    0.948    0.901
+path:dc-444-12         1280x720      12      8292.00        2675.20    0.323    0.333
+path:sparse-444-12     1280x720      12     11705.18        4537.97    0.388    0.356
+path:medium-444-12     1280x720      12     21399.22       10651.13    0.498    0.460
+path:dense-444-12      1280x720      12     43671.71       32741.77    0.750    0.742
+path:dc-alpha16-12     1280x720      12     10095.09        5234.20    0.518    0.566
+path:dc-alpha8-10      1280x720      12      3951.51        4017.10    1.017    1.002
+4444-testsrc2-720p     1280x720      16     14215.85        7534.78    0.530    0.521
+4444a-testsrc2-720p    1280x720      16     26834.97       18186.99    0.678    0.674
+aw-testsrc2-1080i      1920x1080     12     10508.13       10314.97    0.982    0.977
+hq-mandelbrot-720p     1280x720      24      9412.19        9433.68    1.002    1.027
+hq-photo-704x576       704x576       30      7092.71        7051.88    0.994    0.995
+hq-testsrc2-720p       1280x720      24      4354.46        4043.15    0.929    0.965
+ks-testsrc2-1080i      1920x1080     12      9299.07        8994.63    0.967    0.904
+proxy-testsrc2-720p    1280x720      24      2423.16        2192.95    0.905    0.904
+real-422-hq            1920x1080      2      5786.71        5453.59    0.942    0.813
+real-422-proxy         1920x1080      2      5510.78        5206.70    0.945    0.831
+real-4444-alpha        1920x1080      2     24607.07       10812.19    0.439    0.418
+real-4444-transparency 1920x1080      1     30841.77       16370.61    0.531    0.665
+xq-mandelbrot-720p     1280x720      16     28879.28       17685.60    0.612    0.636

@@ -1,0 +1,2 @@
+RESULT codec=tta seed=1005 mode=generated cases=143616 packets=569461 decoded=276583 rejected=292878 refused_configs=17082 mismatches=0 panics=0
+RESULT codec=tta seed=1010 mode=generated cases=331904 packets=1317377 decoded=641116 rejected=676261 refused_configs=39398 mismatches=0 panics=0

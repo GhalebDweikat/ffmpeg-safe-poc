@@ -1,0 +1,51 @@
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+    Finished `release` profile [optimized] target(s) in 0.14s
+== fuzz gate (8s per process)
+RESULT codec=targa seed=204762 mode=generated cases=161216 packets=724539 decoded=437899 rejected=286640 refused_configs=0 mismatches=0 panics=0
+RESULT codec=targa seed=20146 mode=mutate-real cases=174464 packets=784514 decoded=465072 rejected=319442 refused_configs=0 mismatches=0 panics=0
+RESULT codec=targa seed=36814 mode=generated cases=165696 packets=744159 decoded=449660 rejected=294499 refused_configs=0 mismatches=0 panics=0
+RESULT codec=targa seed=263691 mode=generated cases=160128 packets=723309 decoded=437334 rejected=285975 refused_configs=0 mismatches=0 panics=0
+RESULT codec=targa seed=98063 mode=generated cases=162880 packets=731987 decoded=442419 rejected=289568 refused_configs=0 mismatches=0 panics=0
+RESULT codec=targa seed=30161 mode=mutate-real cases=36032 packets=161542 decoded=106592 rejected=54950 refused_configs=0 mismatches=0 panics=0
+== bench
+input                  size      frames   C us/frame  Rust us/frame   Rust/C    (min)
+path:raw8              1280x720      60        41.78          41.08    0.983    1.007
+path:raw16             1280x720      60       104.46         103.65    0.992    0.996
+path:raw24             1280x720      60       162.62         165.49    1.018    0.993
+path:raw32             1280x720      60       227.43         224.46    0.987    1.012
+path:rawpal            1280x720      60        41.85          42.54    1.016    1.014
+path:raw24-bu          1280x720      60       191.46         194.55    1.016    1.004
+path:raw24-il          1280x720      60       221.58         215.23    0.971    1.002
+path:run8              1280x720      60       853.40        3062.04    3.588    3.558
+path:run16             1280x720      60       674.42        1791.92    2.657    2.542
+path:run24             1280x720      60       648.48        1581.15    2.438    2.553
+path:run32             1280x720      60       443.08        1600.36    3.612    3.571
+path:run8-short        1280x720      60      1434.15        3847.41    2.683    2.927
+path:run24-short       1280x720      60      1479.87        3216.39    2.173    2.221
+path:run32-short       1280x720      60      1390.91        3438.48    2.472    2.479
+path:lit8              1280x720      60        81.87          81.81    0.999    0.974
+path:lit16             1280x720      60       153.36         153.35    1.000    0.989
+path:lit24             1280x720      60       206.84         205.14    0.992    0.981
+path:lit32             1280x720      60       245.65         243.40    0.991    0.987
+path:lit24-short       1280x720      60      1244.06        1109.92    0.892    0.886
+path:mix24             1280x720      60      1153.75        1238.40    1.073    1.046
+path:flip8             1280x720      60       329.56        1070.41    3.248    3.241
+path:flip16            1280x720      60       387.67        1208.14    3.116    3.196
+path:flip24            1280x720      60       734.04        1450.69    1.976    1.982
+path:flip32            1280x720      60       472.59        1626.70    3.442    3.530
+life-720p-gray         1280x720     120      1431.30        2371.47    1.657    1.958
+mandelbrot-720p-bgr24  1280x720     120      2660.51        3160.98    1.188    1.198
+photo-704x576-bgr24    704x576       50      1041.50        1324.19    1.271    1.170
+photo-704x576-bgra     704x576       50       936.40        1148.34    1.226    1.214
+raw-720p-bgr24         1280x720      30       173.78         173.21    0.997    1.010
+raw-720p-bgra          1280x720      30       230.68         226.80    0.983    1.000
+raw-720p-pal8          1280x720      30        30.52          30.97    1.015    1.011
+real-CCM8-x200         128x128      200        15.79          44.53    2.820    2.866
+real-CTC24-x200        128x128      200        24.30          37.51    1.544    1.625
+real-UTC32-x200        128x128      200         1.94           1.99    1.023    1.017
+small-321x240-bgr24    321x240      300        75.07         129.42    1.724    1.746
+testsrc2-720p-bgr24    1280x720     120       813.64        1764.91    2.169    2.259
+testsrc2-720p-bgra     1280x720     120       676.32        1811.79    2.679    2.723
+testsrc2-720p-gray     1280x720     120       644.65        2145.37    3.328    3.373
+testsrc2-720p-pal8     1280x720     120       761.09        2140.61    2.813    2.783
+testsrc2-720p-rgb555   1280x720     120       723.53        1609.68    2.225    2.253

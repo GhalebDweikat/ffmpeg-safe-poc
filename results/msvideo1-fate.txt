@@ -1,0 +1,9 @@
+== msvideo1: decoder FFmpeg picks by default
+  Stream #0:0 -> #0:0 (msvideo1 (msvideo1_rs) -> wrapped_avframe (native))
+PASS fate-msvideo1-8bit
+PASS fate-msvideo1-16bit
+PASS fate-lavf-fate-cram.avi
+PASS fate-vsynth1-msvideo1
+PASS fate-vsynth2-msvideo1
+PASS fate-vsynth_lena-msvideo1
+FATE msvideo1: 6 passed, 0 failed

@@ -1,7 +1,7 @@
 /*
  * Decode benchmark for the safe decoder ports.
  *
- * Loads every video packet of a file into memory, then times complete
+ * Loads every packet of the codec's stream in a file into memory, then times complete
  * decode passes through libavcodec for FFmpeg's C decoder and for the Rust
  * port, alternating between them. Before timing, it decodes the input once
  * with each and requires identical frames.
@@ -30,6 +30,16 @@ static AVPacket **pkts;
 static int nb_pkts;
 static AVCodecParameters *par;
 static Cfg synth_cfg;
+static const CodecOps *ops;
+
+int find_stream(AVFormatContext *fmt, enum AVCodecID id);
+int find_stream(AVFormatContext *fmt, enum AVCodecID id)
+{
+    for (unsigned i = 0; i < fmt->nb_streams; i++)
+        if (fmt->streams[i]->codecpar->codec_id == id)
+            return i;
+    return -1;
+}
 
 static double now_ms(void)
 {
@@ -64,6 +74,8 @@ static double pass(const char *name, uint64_t *hash, int *frames)
     else
         cfg_to_context(&synth_cfg, ctx);
     ctx->thread_count = 1;
+    if (ops->setup)
+        ops->setup(ctx, &synth_cfg);
     if (avcodec_open2(ctx, codec, NULL) < 0) {
         fprintf(stderr, "cannot open %s\n", name);
         exit(3);
@@ -93,7 +105,6 @@ static double pass(const char *name, uint64_t *hash, int *frames)
 
 int main(int argc, char **argv)
 {
-    const CodecOps *ops;
     const char *names[2];
     AVFormatContext *fmt = NULL;
     AVPacket *pkt;
@@ -135,7 +146,7 @@ int main(int argc, char **argv)
     } else {
         if (avformat_open_input(&fmt, argv[2], NULL, NULL) < 0 ||
             avformat_find_stream_info(fmt, NULL) < 0 ||
-            (vs = av_find_best_stream(fmt, AVMEDIA_TYPE_VIDEO, -1, -1, NULL, 0)) < 0) {
+            (vs = find_stream(fmt, ops->id)) < 0) {
             fprintf(stderr, "cannot read %s\n", argv[2]);
             return 3;
         }

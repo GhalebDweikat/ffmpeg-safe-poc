@@ -1,0 +1,10 @@
+codec: loco; processes: 12, 300s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 12
+cases            4578432
+packets          18534926
+decoded          11364098
+rejected         7170828
+refused_configs  459869
+mismatches       0
+panics           0

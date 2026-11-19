@@ -1,0 +1,2 @@
+libavcodec/loco.c:75:12: runtime error: signed integer overflow: 1176151671 + 971335195 cannot be represented in type 'int'
+libavcodec/loco.c:75:12: runtime error: signed integer overflow: 2002997772 + 144489728 cannot be represented in type 'int'

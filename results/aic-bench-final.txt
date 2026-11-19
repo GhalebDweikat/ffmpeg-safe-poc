@@ -1,0 +1,9 @@
+input                  size      frames   C us/frame  Rust us/frame   Rust/C    (min)
+path:sparse            1280x720      60      2314.35        1575.62    0.681    0.675
+path:sparse-il         1280x720      60      2339.76        1573.20    0.672    0.675
+path:sparse-unary      1280x720      60      2865.28        1572.62    0.549    0.547
+path:dense             1280x720      60      8173.12        6783.22    0.830    0.838
+path:dense-unary       1280x720      60     17616.52        6416.06    0.364    0.363
+path:dc                1280x720      60      1725.35        1058.76    0.614    0.609
+real-oddsize           481x241       57       510.26         412.82    0.809    0.808
+real-small             1440x1080     15      6997.43        5989.35    0.856    0.863

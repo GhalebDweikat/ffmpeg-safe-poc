@@ -1,0 +1,15 @@
+
+License: LGPL version 2.1 or later
+CC	libavutil/error.o
+-rwxr-xr-x 1 root root 18825240 Nov 19 02:35 /build/w/prores/harness/difffuzz-asan
+codec: prores; processes: 6, 120s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 6
+cases            432384
+packets          1946795
+decoded          980507
+rejected         966288
+refused_configs  0
+mismatches       0
+panics           0
+ASAN_DONE

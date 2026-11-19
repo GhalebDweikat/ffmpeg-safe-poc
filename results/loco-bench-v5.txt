@@ -1,0 +1,15 @@
+   Compiling ffsafe-ffi v0.1.0 (/proj/rust/ffsafe-ffi)
+    Finished `release` profile [optimized] target(s) in 2.93s
+ 01:39:04 up 10:39,  0 user,  load average: 3.40, 9.47, 10.23
+input                  size      frames   C us/frame  Rust us/frame   Rust/C    (min)
+path:flat-yuy2         1280x720      12      3759.82        2438.37    0.649    0.654
+path:screen-yuy2       1280x720      12      6409.64        5415.84    0.845    0.849
+path:clean-yuy2        1280x720      12     18413.62       17631.45    0.958    0.884
+path:photo-yuy2        1280x720      12     11721.04       11432.54    0.975    0.966
+path:noise-yuy2        1280x720      12     12298.80       12189.81    0.991    1.006
+path:photo-yv12        1280x720      12      8767.04        8456.96    0.965    0.974
+path:photo-rgb         1280x720      12     25834.57       24938.38    0.965    0.967
+path:photo-rgba        1280x720      12     40972.85       46885.42    1.144    1.116
+path:photo-rgbodd      1280x720      12     31027.64       36676.41    1.182    1.194
+real-pig-rgb           188x128        5       848.49        1010.00    1.190    1.020
+real-pig-yuy2          188x128        3       627.30         777.42    1.239    0.980

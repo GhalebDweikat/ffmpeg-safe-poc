@@ -34,6 +34,10 @@ typedef struct Cfg {
     uint32_t tag;               /* codec_tag */
     uint8_t extradata[1024];
     int extradata_size;
+    int sample_rate, channels;  /* audio */
+    /* Codec-specific choices: made by options(), applied by setup(). All
+     * zero must mean the defaults. */
+    int opt[4];
 } Cfg;
 
 typedef struct CodecOps {
@@ -52,6 +56,19 @@ typedef struct CodecOps {
     void (*config)(Cfg *cfg);
     /* Fuzzing: a mostly valid packet for cfg. */
     void (*gen)(Buf *b, const Cfg *cfg);
+
+    /* Optional. Fuzzing: make the codec-specific choices of a case
+     * (cfg->opt). Called for generated streams after config(), and for
+     * seed files after their parameters were read. */
+    void (*options)(Cfg *cfg);
+    /* Optional: apply cfg to a decoder context before it is opened, for
+     * AVCodecContext fields and private options beyond the basics. Both
+     * decoders get the same call. */
+    void (*setup)(AVCodecContext *ctx, const Cfg *cfg);
+    /* Optional. Fuzzing: called on every packet after mutation, to repair
+     * checksums and the like so that mutated packets get past the first
+     * check. It should leave some packets unrepaired. */
+    void (*fixup)(Buf *b, const Cfg *cfg);
 
     /* Optional: call the Rust entry point directly as well, outside
      * libavcodec. direct_step returns a status index (0 .. nb_status - 1)
@@ -75,6 +92,16 @@ extern const CodecOps ops_rpza    __attribute__((weak));
 extern const CodecOps ops_msrle   __attribute__((weak));
 extern const CodecOps ops_cinepak __attribute__((weak));
 extern const CodecOps ops_v210    __attribute__((weak));
+extern const CodecOps ops_qtrle    __attribute__((weak));
+extern const CodecOps ops_msvideo1 __attribute__((weak));
+extern const CodecOps ops_targa    __attribute__((weak));
+extern const CodecOps ops_vble     __attribute__((weak));
+extern const CodecOps ops_loco     __attribute__((weak));
+extern const CodecOps ops_magicyuv __attribute__((weak));
+extern const CodecOps ops_prores   __attribute__((weak));
+extern const CodecOps ops_aic      __attribute__((weak));
+extern const CodecOps ops_flac     __attribute__((weak));
+extern const CodecOps ops_tta      __attribute__((weak));
 
 const CodecOps *find_codec(const char *name);
 
@@ -86,12 +113,15 @@ void mutate(Buf *b, const CodecOps *ops);
 
 void cfg_to_context(const Cfg *cfg, AVCodecContext *ctx);
 
-/* Compare everything a caller can see: format, size, flags, every visible
- * sample of every plane, and the palette. Returns NULL when equal, else
- * the name of the first thing that differs. */
+/* Compare everything a caller can see. Video: format, size, flags, picture
+ * type, colour properties, every visible sample of every plane, and the
+ * palette. Audio: sample format, sample count, sample rate, channel
+ * layout, flags, and every sample. Returns NULL when equal, else the name
+ * of the first thing that differs. */
 const char *frame_diff(const AVFrame *a, const AVFrame *b);
 
-/* FNV-1a over the visible samples of every plane (and the palette). */
+/* FNV-1a over the visible samples of every plane (and the palette), or
+ * over every audio sample. */
 uint64_t frame_hash(const AVFrame *f, uint64_t h);
 
 #endif

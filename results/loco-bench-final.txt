@@ -1,0 +1,12 @@
+input                  size      frames   C us/frame  Rust us/frame   Rust/C    (min)
+path:flat-yuy2         1280x720      12      3406.25        2147.22    0.630    0.632
+path:screen-yuy2       1280x720      12      5408.21        4476.37    0.828    0.824
+path:clean-yuy2        1280x720      12     12645.49       10741.25    0.849    0.840
+path:photo-yuy2        1280x720      12     10382.88        9127.98    0.879    0.874
+path:noise-yuy2        1280x720      12     10983.03       10419.35    0.949    0.941
+path:photo-yv12        1280x720      12      7876.05        6898.60    0.876    0.875
+path:photo-rgb         1280x720      12     15669.63       13840.55    0.883    0.877
+path:photo-rgba        1280x720      12     21240.55       18587.77    0.875    0.874
+path:photo-rgbodd      1280x720      12     15761.90       13877.53    0.880    0.879
+real-pig-rgb           188x128        5       428.15         400.11    0.935    0.943
+real-pig-yuy2          188x128        3       302.05         276.04    0.914    0.909

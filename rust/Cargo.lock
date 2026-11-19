@@ -3,6 +3,10 @@
 version = 4
 
 [[package]]
+name = "aic-core"
+version = "0.1.0"
+
+[[package]]
 name = "cinepak-core"
 version = "0.1.0"
 
@@ -10,14 +14,48 @@ version = "0.1.0"
 name = "ffsafe-ffi"
 version = "0.1.0"
 dependencies = [
+ "aic-core",
  "cinepak-core",
+ "flac-core",
+ "loco-core",
+ "magicyuv-core",
  "msrle-core",
+ "msvideo1-core",
+ "prores-core",
+ "qtrle-core",
  "rpza-core",
+ "targa-core",
+ "tta-core",
  "v210-core",
+ "vble-core",
 ]
 
 [[package]]
+name = "flac-core"
+version = "0.1.0"
+
+[[package]]
+name = "loco-core"
+version = "0.1.0"
+
+[[package]]
+name = "magicyuv-core"
+version = "0.1.0"
+
+[[package]]
 name = "msrle-core"
+version = "0.1.0"
+
+[[package]]
+name = "msvideo1-core"
+version = "0.1.0"
+
+[[package]]
+name = "prores-core"
+version = "0.1.0"
+
+[[package]]
+name = "qtrle-core"
 version = "0.1.0"
 
 [[package]]
@@ -25,5 +63,17 @@ name = "rpza-core"
 version = "0.1.0"
 
 [[package]]
+name = "targa-core"
+version = "0.1.0"
+
+[[package]]
+name = "tta-core"
+version = "0.1.0"
+
+[[package]]
 name = "v210-core"
+version = "0.1.0"
+
+[[package]]
+name = "vble-core"
 version = "0.1.0"

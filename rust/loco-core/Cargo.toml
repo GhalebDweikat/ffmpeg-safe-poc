@@ -1,0 +1,6 @@
+[package]
+name = "loco-core"
+version = "0.1.0"
+edition = "2021"
+description = "Safe Rust port of FFmpeg's LOCO decoder"
+license = "LGPL-2.1-or-later"

@@ -1,8 +1,10 @@
 #include <string.h>
 
+#include "libavutil/channel_layout.h"
 #include "libavutil/imgutils.h"
 #include "libavutil/mem.h"
 #include "libavutil/pixdesc.h"
+#include "libavutil/samplefmt.h"
 
 #include "common.h"
 
@@ -11,6 +13,16 @@ static const CodecOps *const all_codecs[] = {
     &ops_msrle,
     &ops_cinepak,
     &ops_v210,
+    &ops_qtrle,
+    &ops_msvideo1,
+    &ops_targa,
+    &ops_vble,
+    &ops_loco,
+    &ops_magicyuv,
+    &ops_prores,
+    &ops_aic,
+    &ops_flac,
+    &ops_tta,
 };
 
 const CodecOps *find_codec(const char *name)
@@ -103,6 +115,9 @@ void cfg_to_context(const Cfg *cfg, AVCodecContext *ctx)
     ctx->height                = cfg->h;
     ctx->bits_per_coded_sample = cfg->bits;
     ctx->codec_tag             = cfg->tag;
+    ctx->sample_rate           = cfg->sample_rate;
+    if (cfg->channels)
+        av_channel_layout_default(&ctx->ch_layout, cfg->channels);
     if (cfg->extradata_size) {
         ctx->extradata = av_mallocz(cfg->extradata_size + AV_INPUT_BUFFER_PADDING_SIZE);
         memcpy(ctx->extradata, cfg->extradata, cfg->extradata_size);
@@ -117,10 +132,12 @@ static void plane_extent(const AVFrame *f, int p, int *row_bytes, int *rows)
     int planes = av_pix_fmt_count_planes(f->format);
 
     *row_bytes = *rows = 0;
-    if (!desc || p >= planes)
+    if (!desc)
         return;
+    /* The palette is in data[1] but is not counted as a plane, so this
+     * test has to come before the plane count. */
     if (desc->flags & AV_PIX_FMT_FLAG_PAL) {
-        if (p == 1) {                   /* the palette */
+        if (p == 1) {
             *row_bytes = AVPALETTE_SIZE;
             *rows      = 1;
             return;
@@ -128,9 +145,21 @@ static void plane_extent(const AVFrame *f, int p, int *row_bytes, int *rows)
         if (p > 1)
             return;
     }
+    if (p >= planes)
+        return;
     *row_bytes = av_image_get_linesize(f->format, f->width, p);
     *rows      = p == 1 || p == 2 ? AV_CEIL_RSHIFT(f->height, desc->log2_chroma_h)
                                   : f->height;
+}
+
+/* Audio: the number of data planes and the bytes of samples in each. */
+static void audio_extent(const AVFrame *f, int *planes, size_t *bytes)
+{
+    int ch     = f->ch_layout.nb_channels;
+    int planar = av_sample_fmt_is_planar(f->format);
+
+    *planes = planar ? ch : 1;
+    *bytes  = (size_t)f->nb_samples * av_get_bytes_per_sample(f->format) * (planar ? 1 : ch);
 }
 
 const char *frame_diff(const AVFrame *a, const AVFrame *b)
@@ -139,12 +168,31 @@ const char *frame_diff(const AVFrame *a, const AVFrame *b)
 
     if (a->format != b->format)
         return "format";
-    if (a->width != b->width || a->height != b->height)
-        return "size";
     if (a->flags != b->flags)
         return "flags";
+    if (a->nb_samples || b->nb_samples) {
+        int planes;
+        size_t bytes;
+        if (a->nb_samples != b->nb_samples)
+            return "nb_samples";
+        if (a->sample_rate != b->sample_rate)
+            return "sample_rate";
+        if (av_channel_layout_compare(&a->ch_layout, &b->ch_layout))
+            return "channel layout";
+        audio_extent(a, &planes, &bytes);
+        for (int p = 0; p < planes; p++)
+            if (memcmp(a->extended_data[p], b->extended_data[p], bytes))
+                return "samples";
+        return NULL;
+    }
+    if (a->width != b->width || a->height != b->height)
+        return "size";
     if (a->pict_type != b->pict_type)
         return "pict_type";
+    if (a->color_range != b->color_range || a->color_primaries != b->color_primaries ||
+        a->color_trc != b->color_trc || a->colorspace != b->colorspace ||
+        a->chroma_location != b->chroma_location)
+        return "colour properties";
     for (int p = 0; p < 4; p++) {
         int row_bytes, rows;
         plane_extent(a, p, &row_bytes, &rows);
@@ -158,6 +206,15 @@ const char *frame_diff(const AVFrame *a, const AVFrame *b)
 
 uint64_t frame_hash(const AVFrame *f, uint64_t h)
 {
+    if (f->nb_samples) {
+        int planes;
+        size_t bytes;
+        audio_extent(f, &planes, &bytes);
+        for (int p = 0; p < planes; p++)
+            for (size_t x = 0; x < bytes; x++)
+                h = (h ^ f->extended_data[p][x]) * 0x100000001b3ULL;
+        return h;
+    }
     for (int p = 0; p < 4; p++) {
         int row_bytes, rows;
         plane_extent(f, p, &row_bytes, &rows);

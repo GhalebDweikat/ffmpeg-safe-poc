@@ -1,0 +1,10 @@
+codec: vble; processes: 11, 180s each
+no mismatches, no panics, no sanitizer reports
+clean runs: 11
+cases            3863936
+packets          17391306
+decoded          12199175
+rejected         5192131
+refused_configs  0
+mismatches       0
+panics           0
